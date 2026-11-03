@@ -1,0 +1,63 @@
+/* Equal visibility for design and engineering, with the existing editorial grid. */
+.editorial-hero__composition{min-height:745px}
+.editorial-hero__role{max-width:410px;font-size:12px;line-height:1.5}
+.editorial-hero__intro .editorial-hero__availability{font-size:12px;line-height:1.6;margin:0 0 23px;max-width:300px;letter-spacing:0;color:var(--ink)}
+.editorial-hero__availability>.mono{display:block;font-size:7px;line-height:1.7;letter-spacing:.04em;color:var(--accent);margin-bottom:7px}
+.editorial-hero__availability>small{display:block;font-size:11px;line-height:1.6;color:var(--soft);margin-top:4px}
+.editorial-hero__intro{width:320px}
+.editorial-hero__edition{bottom:23px}
+.practice-filter{gap:28px}
+.practice-filter>button{white-space:nowrap}
+.project-card--leiriu.project-card--lead .project-card__title{color:var(--accent)}
+.contact-bottom>p{max-width:425px;line-height:1.9}
+
+/* Layered motion keeps captions, controls and body copy stable. */
+.depth-layer{transform:translate3d(0,var(--depth-y,0px),0);will-change:transform}
+.project-card__visual{overflow:hidden}
+.project-card .project-card__visual>img.depth-media{transform:translate3d(0,var(--depth-y,0px),0);scale:1.14;transition:scale .65s;will-change:transform}
+.project-card .project-card__link:hover .project-card__visual>img.depth-media{transform:translate3d(0,var(--depth-y,0px),0);scale:1.17}
+.project-card .engineering-cover.depth-layer{height:112%;margin-top:-6%}
+.about-heading.depth-layer{will-change:transform}
+.recognition-shot.depth-layer{will-change:transform}
+
+/* A photographic cast-shadow asset replaces the blurred icon silhouette. */
+span.cat-shadow{display:block;aspect-ratio:2/3;height:auto;filter:none;transform:translate3d(0,var(--depth-y,0px),0);opacity:.38;will-change:transform}
+.cat-shadow>img{width:100%;height:100%;object-fit:contain;max-width:none;transform:skewX(-10deg);transform-origin:bottom center;pointer-events:none}
+.cat-shadow.cat-shadow--editorial{width:112px;left:41%;bottom:66px;opacity:.38}
+:root[data-view=home] .cat-shadow--contact{width:185px;right:27%;bottom:87px;opacity:.48;filter:none}
+.cat-shadow.cat-shadow--contact{opacity:.48}
+.cat-shadow--contact>img{transform:skewX(-22deg) rotate(-5deg)}
+.cert-preview{min-width:0}
+.lei-inline-detail>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.lei-inline-detail>summary::-webkit-details-marker{display:none}
+.lei-inline-detail>img{display:block;width:100%;height:auto;max-height:320px;object-fit:contain;margin-top:15px}
+
+/* These remove the site's saving shortcuts, not browser-level access to bytes. */
+main img,main video,main audio,main canvas,.art-dialog img{user-select:none;-webkit-user-drag:none;-webkit-touch-callout:none}
+@media(max-width:1100px) and (min-width:721px){
+  .editorial-hero__composition{min-height:680px}
+  .editorial-hero__intro{width:280px}
+  .editorial-hero__role{font-size:11px;max-width:360px}
+  .cat-shadow.cat-shadow--editorial{width:90px;left:40%;bottom:70px}
+}
+@media(max-width:720px){
+  .editorial-hero__composition{min-height:0}
+  .editorial-hero__role{font-size:10px;max-width:245px}
+  .editorial-hero__intro{width:280px;margin-top:28px;padding-bottom:36px}
+  .editorial-hero__intro .editorial-hero__availability{font-size:11px;max-width:270px;margin-bottom:21px}
+  .editorial-hero__availability>.mono{font-size:7px}
+  .editorial-hero__availability>small{font-size:10px}
+  .cat-shadow.cat-shadow--editorial{width:62px;left:auto;right:-4%;bottom:48px;opacity:.38}
+  .practice-filter{gap:12px;justify-content:space-between}
+  .practice-filter>button{font-size:11px;gap:8px;letter-spacing:-.01em}
+  .practice-filter>button span{font-size:6px}
+  :root[data-view=home] .cat-shadow--contact{width:115px;right:16%;bottom:150px;opacity:.4}
+  .contact-bottom>p{max-width:210px;font-size:8px}
+  .project-card .project-card__visual>img.depth-media{transform:translate3d(0,var(--depth-y,0px),0);scale:1.11}
+}
+@media(prefers-reduced-motion:reduce){
+  .depth-layer,span.cat-shadow{transform:none;will-change:auto}
+  .project-card .project-card__visual>img.depth-media,.project-card .project-card__link:hover .project-card__visual>img.depth-media{transform:none;scale:1;transition:none;will-change:auto}
+  .project-card .engineering-cover.depth-layer{height:100%;margin:0}
+}
+@media(max-width:360px){.practice-filter{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px}}

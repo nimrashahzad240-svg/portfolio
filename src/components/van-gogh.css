@@ -1,0 +1,129 @@
+/* Van Gogh study: a paper collage, with painted fragments at the edges. */
+html[data-project="van-gogh"]{--paper:#f4f1e7;--ink:#203642;--soft:#626861;--green:#214b91;--rust:#98712e;--rule:#d7d3c4;background:#f4f1e7;color-scheme:light}
+.study--van-gogh{position:relative!important;isolation:isolate;overflow:clip;background:#f4f1e7}
+.study--van-gogh .study__bar{position:relative;z-index:2;background:#f4f1e7e8;border-bottom:1px solid #c8c7b9}
+.study--van-gogh .study__inner{position:relative;z-index:1;max-width:1360px;padding-top:22px}
+.study--van-gogh .study__head.vg-cover{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:0 6%;padding:0 0 32px;margin-bottom:48px}
+.vg-cover__edition{grid-column:1/-1;display:flex;justify-content:space-between;gap:20px;padding:15px 0 35px;font:9px/1.6 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.vg-cover__copy{position:relative;z-index:2;padding:10px 0 28px;align-self:center}
+.vg-cover__pretitle{font:8px/1.6 var(--mono);letter-spacing:.13em;margin:0 0 24px;color:#5d675e}
+.study--van-gogh .study__title{font-family:var(--serif);font-weight:400;font-size:clamp(98px,13.4vw,190px);line-height:.77;letter-spacing:-.065em;color:#254b90;margin:0 0 30px;max-width:none}
+.vg-cover .study__title>span{display:block}
+.vg-cover .study__title .vg-cover__small{font-size:clamp(27px,3.3vw,46px);line-height:1.25;letter-spacing:-.035em;margin-bottom:12px;color:#344c54}
+.study--van-gogh .vg-cover .study__q{font-size:clamp(23px,2.5vw,34px);line-height:1.15;letter-spacing:-.02em;color:#33494b;margin:0 0 24px;max-width:340px}
+.vg-cover__play{display:inline-flex;align-items:center;gap:30px;padding:12px 0 8px;border-bottom:1px solid #284b88;font:10px/1.5 var(--mono);color:#214b91}
+.vg-cover__play span{font:28px/.7 var(--serif)}
+.vg-cover__play:hover{color:#855d22;border-color:#855d22}
+.vg-cover__collage{position:relative;min-height:520px;align-self:stretch;display:flex;align-items:center;padding:25px 6% 50px 0}
+.vg-cover__sun{position:absolute;right:0;top:0;width:78%;aspect-ratio:1;background:#e9c45c;border-radius:50%;transform:rotate(-8deg);box-shadow:inset 0 0 35px #d7a94e45}
+.vg-cover__render{position:relative;width:100%;max-width:420px;margin:0;transform:rotate(3deg);z-index:1}
+.vg-cover__render>img{display:block;width:100%;height:430px;object-fit:cover;object-position:center;border-radius:48% 48% 0 0;box-shadow:8px 10px 0 #d7c89f}
+.vg-cover__render figcaption{font:9px/1.6 var(--mono);color:#515e5a;margin-top:16px;padding-left:6px;max-width:80%}
+.vg-cover__iris{position:absolute;z-index:2;left:-22%;bottom:18px;width:51%;height:350px;object-fit:contain;transform:rotate(-14deg);pointer-events:none;filter:drop-shadow(3px 6px 1px #253b4a17)}
+.vg-cover__side{position:absolute;right:-15px;top:32%;writing-mode:vertical-rl;font:8px/1.5 var(--mono);letter-spacing:.1em;color:#38547a}
+.study--van-gogh .vg-cover__facts{grid-column:1/-1;position:relative;margin-top:24px;gap:28px;border-top:1px solid #a9afa0;padding:22px 0 0}
+.study--van-gogh .study__quick-facts span{color:#5c6b67}
+.study--van-gogh .study__quick-facts p{font-size:11px;color:#2e474a}
+.study--van-gogh .study__hero{border-radius:2px;margin:0 0 65px;padding:14px 14px 0;background:#e6dfce;border:1px solid #d5cdb8;box-shadow:7px 8px 0 #b5b9a433}
+.study--van-gogh .study__hero video{display:block;background:#18283a;max-height:650px}
+.study--van-gogh .study__hero figcaption{color:#59675f;padding:14px 4px 16px;font:10px/1.8 var(--mono)}
+.study--van-gogh .study__layout{grid-template-columns:minmax(0,1fr) 225px;gap:clamp(30px,5vw,80px)}
+.study--van-gogh .study__body{background:#f4f1e7f2;padding:0 26px 30px;min-width:0}
+.study--van-gogh .study__standfirst{font:400 clamp(22px,2.4vw,31px)/1.45 var(--serif);color:#294546;padding:22px 0 8px;letter-spacing:-.02em}
+.study--van-gogh .sect{padding:34px 0 18px;border-color:#c7ccbb}
+.study--van-gogh .sect h3{font:400 clamp(27px,3vw,37px)/1.13 var(--serif);letter-spacing:-.025em;color:#234b8b;max-width:530px}
+.study--van-gogh .sect p,.study--van-gogh .sect li{color:#4f6059;font-size:14px;line-height:1.85}
+.study--van-gogh .sect--broke{background:#eae5d4;border:0;border-left:3px solid #c69b41;border-radius:0;padding:27px 25px 15px}
+.study--van-gogh .sect--broke h3{color:#5f562f}
+.study--van-gogh .study__aside{background:#efe7c9;padding:24px;height:fit-content;border:1px solid #d6ca99;border-radius:0;box-shadow:5px 6px 0 #d9d3be;transform:rotate(1deg)}
+.study--van-gogh .study__aside .chips li{color:#40584e;border-color:#c5c4ac}
+.study--van-gogh .study__aside .inline-link{color:#244b8c}
+.study--van-gogh .process-images{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.study--van-gogh .process-images figure{margin:0;padding:10px 10px 16px;background:#e8e0ce;border:1px solid #d6ccb4;transform:rotate(-1.5deg)}
+.study--van-gogh .process-images figure:nth-child(even){transform:rotate(1.5deg)}
+.study--van-gogh .process-images img{height:auto;max-height:none;width:100%;padding:0;border-radius:0}
+.study--van-gogh .process-images figcaption{padding:9px 0 0;font:10px/1.75 var(--mono);color:#536052}
+.study--van-gogh .study__next{background:#ece6d0;border:0;border-top:1px solid #bcc3ae;padding:25px 20px}
+.study--van-gogh .study__next button{color:#254b90}
+.vg-sky{--sky-scroll:0px;position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:layout paint}
+.vg-paint{position:absolute;width:clamp(420px,65vw,1150px);height:auto;will-change:transform}
+.vg-paint--one{left:-42%;top:14%;transform:translateY(calc(var(--sky-scroll) * -.028)) rotate(55deg);opacity:.86}
+.vg-paint--two{right:-42%;top:71%;transform:translateY(calc(var(--sky-scroll) * -.052)) rotate(-35deg);opacity:.8}
+.vg-paper-grain{position:absolute;inset:0;opacity:.28;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.16' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px;mix-blend-mode:multiply}
+html[data-project="van-gogh"] .nav-contact{background:#254b90;color:#fff;border-color:#254b90}
+html[data-project="van-gogh"]{--contact-bg:#e7d38f;--contact-fg:#233d48;--contact-accent:#2c5191;--contact-soft:#57654f;--contact-rule:#b6a264}
+html[data-project="van-gogh"] .contact h2 em{color:#2c5191}
+html[data-project="van-gogh"] .contact .eyebrow{color:#57654f}
+html[data-project="van-gogh"] .contact-arrow{border-color:#727b5e}
+html[data-project="van-gogh"] .contact-bottom{color:#3b554c}
+html[data-project="van-gogh"] .foot{background:#f4f1e7;color:#57675c}
+@media(min-width:1600px){.vg-paint--one{left:-36%}.vg-paint--two{right:-36%}}
+@media(max-width:900px){.study--van-gogh .study__head.vg-cover{gap:0 4%}.vg-cover__collage{min-height:440px}.vg-cover__render>img{height:360px}.vg-cover__iris{height:280px;left:-15%;width:55%}.study--van-gogh .study__layout{grid-template-columns:minmax(0,1fr) 200px;gap:25px}.study--van-gogh .study__body{padding:0 12px 25px}.study--van-gogh .study__aside{padding:18px}}
+@media(max-width:700px){.study--van-gogh .study__head.vg-cover{grid-template-columns:1fr;margin-bottom:24px;padding-bottom:15px}.vg-cover__edition{font-size:7px;padding-bottom:22px;align-items:flex-start}.vg-cover__edition>span{max-width:55%}.vg-cover__edition>span:last-child{text-align:right;max-width:35%}.vg-cover__copy{padding:5px 0 24px}.vg-cover__pretitle{font-size:7px;margin-bottom:18px}.study--van-gogh .study__title{font-size:clamp(68px,19vw,135px);line-height:.8;margin-bottom:22px}.vg-cover .study__title>span:not(.vg-cover__small){display:inline}.vg-cover .study__title>span:last-child::before{content:' '}.vg-cover .study__title .vg-cover__small{font-size:33px;margin-bottom:10px}.study--van-gogh .vg-cover .study__q{font-size:25px}.vg-cover__collage{width:85%;max-width:410px;justify-self:end;min-height:370px;padding:14px 12% 32px 0;margin:5px 0 10px}.vg-cover__render>img{height:330px}.vg-cover__iris{height:245px;left:-20%;bottom:16px}.vg-cover__side{right:3%;font-size:7px}.study--van-gogh .vg-cover__facts{margin-top:20px;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.study--van-gogh .study__quick-facts p{font-size:9px;line-height:1.65}.study--van-gogh .study__quick-facts span{font-size:6px}.study--van-gogh .study__hero{padding:7px 7px 0;margin-bottom:32px}.study--van-gogh .study__layout{grid-template-columns:1fr;gap:26px}.study--van-gogh .study__body{padding:0 6px 20px}.study--van-gogh .study__aside{max-width:100%;transform:none;margin-bottom:20px}.study--van-gogh .process-images{gap:14px}.study--van-gogh .process-images figure{padding:6px 6px 10px}.study--van-gogh .process-images figcaption{font-size:8px}.vg-paint--one{left:-80%;top:10%;width:145vw;opacity:.4}.vg-paint--two{right:-90%;top:70%;width:145vw;opacity:.45}}
+@media(max-width:380px){.study--van-gogh .study__title{font-size:clamp(62px,19vw,75px)}.vg-cover .study__title .vg-cover__small{font-size:27px}.study--van-gogh .process-images{grid-template-columns:1fr;gap:25px}.study--van-gogh .vg-cover__facts{grid-template-columns:1fr 1fr}.vg-cover__collage{min-height:330px}.vg-cover__render>img{height:285px}}
+@media(prefers-reduced-motion:reduce){.vg-paint{transform:none!important;will-change:auto}html[data-project="van-gogh"]{scroll-behavior:auto}}
+.vg-cover__copy{background:linear-gradient(90deg,#f4f1e7 70%,#f4f1e7d9)}
+
+/* Frosted glass lets the painted collage continue behind the reading surface. */
+.study--van-gogh{--vg-moon-progress:0;--vg-flower-progress:0}
+.vg-cover__copy{background:linear-gradient(125deg,#fffef759,#f4f1e729);border:1px solid #ffffffb3;border-radius:24px;box-shadow:inset 0 1px 0 #fff,0 14px 50px #334b7110;backdrop-filter:blur(13px) saturate(125%);-webkit-backdrop-filter:blur(13px) saturate(125%);padding:26px 24px 28px;margin-left:-24px}
+.vg-cover__edition{position:relative;z-index:3}
+.vg-cover__collage{z-index:0}
+.study--van-gogh .vg-cover__facts{z-index:3;background:#fffef752;border:1px solid #ffffffe0;border-radius:18px;padding:24px;box-shadow:inset 0 1px 0 #fff,0 12px 35px #1e37610c;backdrop-filter:blur(15px) saturate(130%);-webkit-backdrop-filter:blur(15px) saturate(130%)}
+.study--van-gogh .study__body{background:linear-gradient(135deg,#fffef778,#f7f3e966);border:1px solid #ffffffc4;border-radius:24px;padding:18px 28px 30px;box-shadow:inset 0 1px 0 #fff,0 20px 65px #233a6810;backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%)}
+.study--van-gogh .study__aside{background:#f5eac15c;border:1px solid #ffffffe0;border-radius:20px;box-shadow:inset 0 1px 0 #fff,0 14px 42px #243b6814;backdrop-filter:blur(17px) saturate(125%);-webkit-backdrop-filter:blur(17px) saturate(125%)}
+.study--van-gogh .study__bar{background:#fffdf170;backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);border-color:#fff9}
+.study--van-gogh .study__hero{background:#fffdf35c;border:1px solid #ffffffe0;border-radius:20px;box-shadow:inset 0 1px 0 #fff,0 20px 65px #1d375b14;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.study--van-gogh .study__hero video{border-radius:12px}
+.study--van-gogh .process-images figure{background:#fff8;border:1px solid #fff;border-radius:12px;box-shadow:0 8px 24px #33486312;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.study--van-gogh .sect--broke,.study--van-gogh .study__next{background:#ead9a94f;border-radius:14px}
+.vg-cover__sun{background:none;box-shadow:none;z-index:0}
+.vg-cover__moon-paint{position:absolute;inset:0;z-index:1;border-radius:50%;background:#e9c45c url('/media/vangogh-painted-sky.png') no-repeat 100% 47%/260% auto;box-shadow:inset 0 0 25px #d8aa3970,0 12px 35px #e0c56620}
+.vg-cover__flower{position:absolute;z-index:2;left:-22%;bottom:18px;width:51%;height:350px;transform:rotate(-14deg);pointer-events:none}
+.vg-cover__flower .vg-cover__iris{position:relative;z-index:1;left:auto;bottom:auto;width:100%;height:100%;transform:none}
+.vg-trail path{stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--trail-progress,0));vector-effect:non-scaling-stroke;will-change:stroke-dashoffset}
+.vg-trail--blue{--paint:#2c57a0;--ridge:#7da9d7;--fleck:#c0d6dc}
+.vg-trail--yellow{--paint:#e3b442;--ridge:#f6d77c;--fleck:#fff1b8}
+.vg-trail__body{stroke:var(--paint);stroke-width:21;opacity:.8}
+.vg-trail__ridge{stroke:var(--ridge);stroke-width:7;opacity:.8;transform:translate(2px,-3px)}
+.vg-trail__fleck{stroke:var(--fleck);stroke-width:2;opacity:.75;transform:translate(-5px,2px)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.vg-cover__copy,.study--van-gogh .study__body,.study--van-gogh .study__aside,.study--van-gogh .vg-cover__facts{background:#f8f5e8e8}}
+@media(max-width:900px){.vg-cover__copy{padding:22px 18px;margin-left:-18px}.vg-cover__flower{height:280px;left:-15%;width:55%}.study--van-gogh .study__body{padding:15px 20px 25px}}
+@media(max-width:700px){.vg-cover__copy{padding:20px 18px;margin:0;border-radius:20px}.vg-cover__collage{z-index:1}.vg-cover__flower{height:245px;left:-20%;bottom:16px;width:55%}.study--van-gogh .vg-cover__facts{padding:18px 14px;gap:12px}.study--van-gogh .study__body{padding:12px 17px 22px}.vg-trail__body{stroke-width:13}.vg-trail__ridge{stroke-width:4}.vg-trail__fleck{stroke-width:1.5}}
+@media(max-width:380px){.vg-cover__flower{height:220px}.study--van-gogh .study__body{padding:10px 14px 18px}}
+@media(prefers-reduced-motion:reduce){.vg-trail path{stroke-dashoffset:0;will-change:auto}}
+@media(prefers-reduced-transparency:reduce){.vg-cover__copy,.study--van-gogh .study__body,.study--van-gogh .study__aside,.study--van-gogh .vg-cover__facts{background:#f8f5e8f5;backdrop-filter:none;-webkit-backdrop-filter:none}}
+
+/* ── painted spirals and sweeps, arriving as you scroll ───────────────── */
+.paint-layer{position:absolute;inset:0;z-index:0;pointer-events:none}
+.paint-slot{position:absolute;display:block;width:clamp(132px,14vw,232px);aspect-ratio:1;transform:scale(var(--mark-scale,1))}
+.paint-slot--left{left:calc(clamp(6px,3vw,62px) + var(--mark-inset,0px))}
+.paint-slot--right{right:calc(clamp(6px,3vw,62px) + var(--mark-inset,0px))}
+.paint-mark{width:100%;height:100%;overflow:visible}
+
+/* a spiral sitting over the moon and the irises */
+.paint-burst{position:absolute;inset:-105%;width:310%;height:310%;z-index:0;overflow:visible;pointer-events:none}
+.paint-burst--flower{inset:-115%;width:330%;height:330%}
+@media (max-width:760px){.paint-slot{width:120px;opacity:.6}.paint-burst{opacity:.65}}
+
+/* each mark is a window cut into the painted texture */
+.paint-dab{
+  stroke-dasharray:1;
+  stroke-dashoffset:clamp(0,calc(1 - (var(--paint,0) - var(--t)) * 7),1);
+  opacity:clamp(0,calc((var(--paint,0) - var(--t)) * 13),.95);
+  transition:stroke-dashoffset 1.1s cubic-bezier(.22,.7,.28,1),opacity .8s ease;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .paint-dab{transition:none;stroke-dashoffset:0;opacity:.9}
+}
+
+/* ── parallax: one scroll variable, CSS does the moving ───────────────── */
+.vg-cover__sun{will-change:transform;transform:rotate(-8deg) translate3d(0,calc(var(--sy,0) * -0.045px),0)}
+.vg-cover__flower{will-change:transform;transform:rotate(-14deg) translate3d(0,calc(var(--sy,0) * 0.055px),0)}
+.vg-cover__render{will-change:transform;transform:translate3d(0,calc(var(--sy,0) * -0.018px),0)}
+@media (prefers-reduced-motion:reduce){
+  .vg-cover__sun{transform:rotate(-8deg)}
+  .vg-cover__flower{transform:rotate(-14deg)}
+  .vg-cover__render{transform:none}
+}

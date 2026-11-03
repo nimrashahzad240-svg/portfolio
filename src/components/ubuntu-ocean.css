@@ -1,0 +1,43 @@
+.study--page.study--ubuntu{position:relative;isolation:isolate;overflow:clip;background:#030c15;color:#e9eef1}
+.ubuntu-ocean{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none;mix-blend-mode:screen}
+.ubuntu-ocean__light{position:fixed;inset:0;opacity:.7;background:radial-gradient(ellipse at 38% -15%,#19748340,transparent 60%),radial-gradient(ellipse at 85% 62%,#6b4d9f20,transparent 60%),linear-gradient(115deg,transparent 16%,#8beff507 17%,transparent 22%,#a3e4ed06 24%,transparent 31%)}
+.ubuntu-ocean__whale{position:absolute;width:clamp(280px,42vw,650px);max-width:none;height:auto;filter:invert(1) hue-rotate(180deg) saturate(1.6) brightness(1.65);mix-blend-mode:screen;mask-image:radial-gradient(ellipse,#000 40%,transparent 74%);opacity:.33;transform:translate3d(0,calc(var(--sy,0) * -.08px),0) rotate(-9deg);will-change:transform}
+.ubuntu-ocean__whale--1{top:170px;right:-4%;width:clamp(260px,39vw,570px);opacity:.38}
+.ubuntu-ocean__whale--2{top:24%;left:-13%;opacity:.22;transform:translate3d(0,calc(var(--sy,0) * -.13px),0) rotate(12deg)}
+.ubuntu-ocean__whale--3{top:48%;right:-9%;width:clamp(360px,54vw,760px);opacity:.28}
+.ubuntu-ocean__whale--4{top:72%;left:3%;width:clamp(220px,33vw,490px);opacity:.2;transform:translate3d(0,calc(var(--sy,0) * -.05px),0) rotate(8deg)}
+.ubuntu-ocean__whale--5{top:94%;right:-14%;opacity:.3}
+.ubuntu-ocean__particles{position:fixed;inset:-10vh -10vw;mix-blend-mode:screen;background-repeat:repeat;opacity:.65}
+.ubuntu-ocean__particles--far{background-image:radial-gradient(circle at 16% 24%,#b5fffba6 0 1px,transparent 2px),radial-gradient(circle at 80% 61%,#b5afff88 0 1px,transparent 2px),radial-gradient(circle at 43% 85%,#77b7d277 0 1px,transparent 2px);background-size:237px 329px,347px 463px,421px 293px;background-position:0 calc(var(--sy,0) * -.12px),0 calc(var(--sy,0) * -.07px),0 calc(var(--sy,0) * -.19px);filter:blur(.25px)}
+.ubuntu-ocean__particles--near{background-image:radial-gradient(circle at 12% 47%,#89e0f088 0 1.5px,#62d4ec22 3px,transparent 6px),radial-gradient(circle at 64% 18%,#dac2ff88 0 1px,#a298df22 3px,transparent 5px),radial-gradient(circle at 83% 76%,#d7f9f477 0 1px,transparent 4px);background-size:563px 631px,719px 547px,443px 853px;background-position:0 calc(var(--sy,0) * -.34px),0 calc(var(--sy,0) * -.24px),0 calc(var(--sy,0) * -.4px);opacity:.6}
+.ubuntu-ocean__life,.ubuntu-ocean__plankton{position:fixed;inset:0;pointer-events:none}
+.ocean-creature{position:absolute;display:block;width:clamp(175px,23vw,340px);aspect-ratio:1;opacity:.45;filter:drop-shadow(0 0 18px #7467db55);will-change:transform}
+.ocean-creature>i{display:block;width:100%;height:100%;background-image:url('/media/ubuntu-ocean-friends.webp');background-size:300% 100%;background-repeat:no-repeat;animation:ocean-breathe 9s ease-in-out infinite}
+.ocean-creature--jelly{right:-2%;top:17%;transform:translate3d(calc(var(--ocean-glide,0px)*-.3),calc(var(--ocean-rise,0px)*.55),0) rotate(-8deg)}
+.ocean-creature--jelly>i{background-position:left center}
+.ocean-creature--ray{left:-7%;top:55%;width:clamp(260px,31vw,480px);opacity:.3;transform:translate3d(var(--ocean-glide,0px),calc(var(--ocean-rise,0px)*.8),0) rotate(12deg)}
+.ocean-creature--ray>i{background-position:center;animation-delay:-3s}
+.ocean-creature--fish{right:0;top:72%;width:clamp(170px,24vw,350px);opacity:.38;transform:translate3d(calc(var(--ocean-glide,0px)*-.7),var(--ocean-rise,0px),0)}
+.ocean-creature--fish>i{background-position:right center;animation-delay:-5s}
+.ubuntu-ocean__plankton{transform:translate3d(0,calc(var(--ocean-rise,0px)*1.3),0)}
+.ubuntu-ocean__plankton>i{position:absolute;width:var(--speck-size);height:var(--speck-size);border-radius:50%;background:#b0cfff;box-shadow:0 0 8px 2px #8b98d552;opacity:.45;animation:ocean-spark 6s ease-in-out var(--speck-delay) infinite}
+@keyframes ocean-breathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-13px) scale(1.025)}}
+@keyframes ocean-spark{0%,100%{opacity:.2}50%{opacity:.65}}
+.project-card--ubuntu .project-card__visual{background:#07090c}
+.project-card--ubuntu .project-card__visual>img{object-fit:cover;padding:0;background:#07090c}
+.study--ubuntu .study__hero{background:#07090c;border-color:#233544}
+.study--ubuntu .study__hero>img{width:100%;height:auto;min-height:0;max-height:630px;padding:0;object-fit:contain;background:#07090c}
+/* Keep foreground content still while the water moves behind it. */
+.study--ubuntu .study__head,.study--ubuntu .study__hero{transform:none;will-change:auto}
+@media(max-width:720px){
+  .ubuntu-ocean__whale--1{top:180px;right:-28%;width:340px;opacity:.26}
+  .ubuntu-ocean__whale--2{left:-45%;width:380px}
+  .ubuntu-ocean__whale--3{right:-45%;width:440px}
+  .ubuntu-ocean__particles--near{opacity:.35}
+  .ocean-creature--jelly{right:-22%;top:12%;opacity:.32}.ocean-creature--ray{left:-30%;width:300px;opacity:.2}.ocean-creature--fish{right:-20%;opacity:.25}
+}
+@media(prefers-reduced-motion:reduce){
+  .ubuntu-ocean__whale{transform:none;will-change:auto}
+  .ubuntu-ocean__particles{background-position:0 0}
+  .ocean-creature,.ubuntu-ocean__plankton{transform:none;will-change:auto}.ocean-creature>i,.ubuntu-ocean__plankton>i{animation:none}
+}

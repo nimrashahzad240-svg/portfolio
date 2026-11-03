@@ -1,0 +1,32 @@
+html[data-view=contact]{--paper:#edece7;--ink:#1d1e1b;--soft:#62635e;--rule:#c8c8be;--accent:#b9472c;--green:#b9472c;--rust:#b9472c;background:var(--paper);color:var(--ink)}
+.contact-page{padding-top:35px;padding-bottom:70px}
+.contact-page__back{font-size:10px;color:var(--soft)}
+.contact-page__grid{display:grid;grid-template-columns:1fr 1fr;gap:9%;padding-top:60px}
+.contact-page__intro>.eyebrow{font-size:8px;margin-bottom:30px;letter-spacing:.035em}
+.contact-page h1{font:400 clamp(65px,6.5vw,100px)/.95 var(--serif);letter-spacing:-.045em;margin:0 0 28px}
+.contact-page h1 em{color:var(--accent)}
+.contact-page__intro>p:not(.eyebrow){font-size:13px;line-height:1.8;max-width:345px;color:var(--soft)}
+.contact-page__address{display:flex;flex-direction:column;align-items:start;gap:12px;margin-top:25px;position:relative;z-index:2}
+.contact-page__address>a{font-size:17px;border-bottom:1px solid var(--rule);padding-bottom:7px;overflow-wrap:anywhere}
+.contact-page__address>button{font:7px var(--mono);padding:0;letter-spacing:.03em;color:var(--accent)}
+.contact-page__characters{position:relative;width:260px;max-width:70%;margin:20px auto 0}
+.contact-page__characters>.frosty{position:absolute;width:42%;bottom:1%;left:-16%}
+.contact-page__intro>.contact-page__location{font:8px/1.8 var(--mono)!important;text-align:center;max-width:none!important;margin-top:15px}
+.contact-page__compose{border-top:1px solid var(--ink);padding-top:24px}
+.contact-page__compose>.mono{font-size:7px;letter-spacing:.035em;margin-bottom:20px;color:var(--accent)}
+.contact-page__compose h2{font:400 61px/.95 var(--serif);letter-spacing:-.035em;margin-bottom:22px}
+.contact-page__explanation{font-size:12px;line-height:1.8;color:var(--soft);max-width:405px;margin-bottom:30px}
+.contact-page form label{display:flex;justify-content:space-between;align-items:center;font-size:11px;margin:24px 0 9px}
+.contact-page form label>span{font:7px var(--mono);color:var(--soft)}
+.contact-page input,.contact-page textarea{display:block;width:100%;border:1px solid var(--rule);border-radius:0;background:#f6f5ef;padding:13px 15px;color:var(--ink);font:13px/1.6 var(--sans);box-shadow:none}
+.contact-page input::placeholder,.contact-page textarea::placeholder{color:#7b7c75}.contact-page input:focus,.contact-page textarea:focus{outline:2px solid var(--accent);outline-offset:2px}.contact-page textarea{resize:vertical;min-height:170px;max-height:600px}
+.contact-page__actions{display:flex;align-items:center;gap:27px;flex-wrap:wrap;margin-top:23px}
+.contact-compose-link{display:inline-flex;gap:35px;align-items:center;background:var(--ink);color:var(--paper);padding:15px 19px;border:1px solid var(--ink);font-size:11px;line-height:1.5}
+.contact-compose-link>span{font-size:23px}.contact-compose-link:hover{background:var(--accent);border-color:var(--accent)}
+.contact-page__honeypot{display:none}
+.contact-page__actions>.inline-link{font-size:10px}
+.contact-page__hint{font-size:10px;line-height:1.8;color:var(--soft);max-width:420px;margin:18px 0 0}
+.contact-page__status{font-size:11px;line-height:1.8;min-height:40px;margin-top:18px;color:var(--accent)}
+html[data-view=contact] .foot{background:var(--paper);color:var(--soft);border-top:1px solid var(--rule);padding-top:23px;padding-bottom:23px;font-size:8px}
+@media(max-width:1000px){.contact-page__grid{gap:6%}.contact-page h1{font-size:75px}.contact-page__characters{width:235px}.contact-page__address>a{font-size:15px}}
+@media(max-width:720px){.contact-page{padding-top:28px;padding-bottom:40px}.contact-page__grid{display:block;padding-top:45px}.contact-page h1{font-size:65px;max-width:340px}.contact-page__intro>.eyebrow{font-size:7px;margin-bottom:25px}.contact-page__intro>p:not(.eyebrow){font-size:12px;max-width:320px}.contact-page__address>a{font-size:16px}.contact-page__characters{width:180px;max-width:55%;margin:18px 0 0 auto}.contact-page__characters>.frosty{width:48%;left:-21%}.contact-page__intro>.contact-page__location{text-align:left;font-size:7px!important;max-width:none!important;margin:20px 0 35px;padding:0}.contact-page__compose{margin-top:30px;padding-top:22px}.contact-page__compose h2{font-size:54px}.contact-page__explanation{font-size:12px;max-width:330px}.contact-page input,.contact-page textarea{font-size:16px;padding:12px}.contact-page__actions{gap:22px}.contact-compose-link{font-size:11px;padding:13px 16px;gap:25px}.contact-page__hint{font-size:10px}.contact-page__status{font-size:11px}}

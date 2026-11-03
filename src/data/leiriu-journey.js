@@ -1,0 +1,49 @@
+import {leiriu as thesis} from './leiriu.js';
+export const leiriuJourney={
+  ...thesis,
+  kicker:'MSc thesis · Interactive artwork',
+  question:'Could a reflection be something you feel?',
+  standfirst:'An interactive artwork made from 48 moving blocks. A depth camera reads movement in front of it; small motors push the blocks in and out. I built it to explore a reflection someone could watch, pause and feel.',
+  media:{type:'image',src:'media/leiriu-dawn-blue.jpg',alt:'The final Léiriú installation illuminated in blue, with its acrylic frame, depth camera and 48 moving blocks.',caption:'The final build at DAWN, August 2026.'},
+  meta:[['My role','Research, interaction design, fabrication, electronics and code'],['Context','ARISE · Mungret Park · University of Limerick'],['Outcome','48-block prototype · DAWN 2026'],['Supervisor','Dr Cristiano Storni']],
+  stack:['Inclusive design','Interviews & co-design','Thematic analysis','Python','Arduino / C++','Intel RealSense','OpenCV','NumPy','PySerial','Pygame','PCA9685','FreeCAD','Affinity Designer','Laser cutting','3D printing'],
+  body:[], timeline:undefined, system:undefined,
+  videos:[
+    {src:'media/leiriu-interaction-sound.mp4',poster:'media/leiriu-interaction.jpg',title:'Testing the button and lights',alt:'Léiriú responding during a button and lighting test.',caption:'The physical response and illuminated control, with original recorded sound.'},
+    {src:'media/leiriu-mechanism-sound.mp4',poster:'media/leiriu-mechanism.jpg',title:'Behind the surface',alt:'A close view of the servos and wire linkages moving Léiriú’s blocks.',caption:'A close look at the mechanism, with original recorded sound.'},
+  ],
+  links:[
+    {label:'My project at DAWN',url:'http://www.dawn.ul.ie/ixuxdesign/2026/NimraShahzad/'},
+    {label:'Featured by University of Limerick',url:'https://www.ul.ie/scieng/schools-and-departments/department-computer-science-and-information-systems/news/a-new-dawn-at-csis'},
+    {label:'The DAWN exhibition',url:'http://www.dawn.ul.ie/'},
+  ],
+};
+export const earlyIdeas=[
+  {title:'A tactile map at the entrance',label:'01 / MAP',image:'leiriu-map-study.jpeg',alt:'Early concept visual showing a raised park map used by a visitor with a cane and a wheelchair user.',credit:'AI-generated concept visual from the thesis, Appendix E.',try:'I started with a raised map and Braille information to help people understand the park before going in.',problem:'A map was useful, but I wanted to make something people could spend time with once they arrived.',next:'I kept the need for clear information and explored the route through the park.'},
+  {title:'Different textures along the paths',label:'02 / PATH',image:'leiriu-path-study.jpeg',alt:'Early concept visual showing a tactile route beside a reachable garden wall.',credit:'AI-generated path concept from the thesis, Appendix E.',extra:'leiriu-participant-path-map.jpeg',extraAlt:'A workshop participant’s drawing of park zones connected by textured paths.',extraCaption:'An ARISE workshop participant’s drawing of park zones and paths.',rotate:true,try:'I explored different surfaces underfoot to help distinguish areas of the garden. A workshop participant’s drawing helped me think through the routes.',problem:'This remained a useful recommendation for ARISE. My own project was moving towards an activity, so I began looking at the wall beside the path.',next:'A reachable wall could be something to interact with as well as follow.'},
+  {title:'Discs that respond to touch',label:'03 / COSÁN NA hAONTACHTA',image:'leiriu-spinner-concept.jpeg',alt:'Early illustrated wall concept with touch-responsive bronze discs and Celtic forms.',credit:'AI-generated spinner-disc concept from the thesis.',try:'I imagined discs along the wall. Touching one would trigger a response further along, rather like one bird answering another.',problem:'With two people using it, one person could interrupt the other’s signal. A blind interviewee also explained that she would use her cane to navigate.',next:'I kept the responsive wall, but asked whether it could react when someone came near without trying to direct them.'},
+  {title:'A face under a silicone sheet',label:'ANOTHER MECHANISM I CONSIDERED',image:'leiriu-silicone-sketch.jpeg',alt:'Nimra’s hand-drawn front and side views of servo-driven pushers behind a stretched silicone face.',credit:'My original silicone-mask sketch, thesis Figure 5.2.',try:'I also sketched a stretched silicone surface with motors pushing from behind, so the face would look continuous.',problem:'A few motors could not reproduce that much detail, especially glasses or a beard. It also limited the surface to faces.',next:'Separate blocks gave me a simpler mechanism and room to make other shapes.'},
+  {title:'A wall that moves when you approach',label:'04 / KINETIC WAVE',image:'leiriu-wave-sketch.jpeg',alt:'Nimra’s sketches of circular and rectangular discs linked by rotating rods.',credit:'My early movement sketches, thesis Figure 5.7.',try:'This version moved in a wave, then responded when someone approached. You could watch it without having to work out an instruction first.',problem:'I had a way to respond to someone. I was still deciding what that response could mean.',next:'During an informal conversation, a PhD student described a blind relative wishing she could know her face in a mirror. That stayed with me. I began exploring a reflection made from moving blocks.'},
+];
+export const buildStages=[
+  {id:'cardboard',number:'01',title:'Cardboard before circuits',subtitle:'Testing depth and shadow',image:'leiriu-cardboard.jpg',alt:'Hand-cut cardboard blocks placed at different depths.',fixed:'I cut blocks by hand and placed them at different depths. Two people could see a face-like shape in the shadows.',problem:'The blocks were fixed in place. I needed to find out how to move them.',next:'I built a small version with six motors.'},
+  {id:'six',number:'02',title:'Six moving blocks',subtitle:'The first motorised version',image:'leiriu-six.jpg',alt:'The six-servo MDF prototype with wire linkages.',fixed:'I bent wire into Z-shaped links so a turning servo motor could push a block forwards and backwards.',problem:'The grid was too small, the gaps were wide and neighbouring motor arms hit each other.',next:'I tried sixteen blocks, changed the spacing and staggered the motors.'},
+  {id:'sixteen',number:'03',title:'Sixteen blocks, and a lot of friction',subtitle:'A 4 × 4 grid',image:'leiriu-sixteen.jpg',alt:'The sixteen-servo prototype during assembly.',detail:'leiriu-friction.jpg',detailAlt:'The finger-jointed block shell that caught against its guide.',fixed:'I changed the motor heights and wire lengths. When the laser-cut block edges caught on the guides, I replaced them with smoother 3D-printed parts.',problem:'Moving more blocks meant making room for the motors, wiring and camera connection.',next:'I designed a tiered frame and expanded the surface to forty-eight blocks.'},
+  {id:'fortyeight',number:'04',title:'Forty-eight blocks',subtitle:'Bringing the parts together',image:'lei-servos.jpg',alt:'The four tiers of motors and wiring behind Léiriú.',fixed:'Four tiers gave the motors room to move. I connected the depth camera, Python program, Arduino and servo-driver boards.',problem:'More motors brought power problems. The camera sometimes detected movement in an empty room, and the blocks did not all travel equally.',next:'I tested the wiring and channels, adjusted the camera processing and calibrated the movement.'},
+];
+export const debugLoops=[
+  {title:'The motors and lights',text:'I checked individual channels, power distribution and the shared ground. I learned to check the wiring as carefully as the code.'},
+  {title:'Movement in an empty room',text:'I recorded the empty background and filtered the camera readings. Different thresholds for starting and stopping movement helped reduce false triggers.'},
+  {title:'An uneven square',text:'The fourth mode was meant to make a square, but the handmade links moved by different amounts. I called the result Random Shape for DAWN. More consistent movement is still something I want to improve.'},
+];
+export const interactionStates=[
+  {title:'Wave',crop:[125,378,339,330],alt:'The blue-lit installation in Wave mode.',text:'The blocks move in a travelling wave. You can just watch.'},
+  {title:'Live',crop:[573,361,350,357],alt:'The installation with pink and blue lighting in Live mode.',text:'Movement in front of the camera moves the blocks, with pink and blue light and soft piano tones.'},
+  {title:'Freeze',crop:[1003,352,348,356],alt:'The blocks holding their relief in Freeze mode.',text:'The button holds the blocks and screen still. Peach light and three spaced chimes mark the pause.'},
+  {title:'Random Shape',crop:[1463,349,379,354],alt:'The irregular block relief with purple lighting in Random Shape mode.',text:'An extra mode I added for DAWN, with an uneven shape, purple light and a changing sound.'},
+];
+export const futureDirections=[
+  {title:'A larger moving wall',crop:[111,354,544,424],alt:'Concept rendering of a public kinetic wall responding to someone walking beside it.',text:'I’d like to try a wall that follows someone moving beside it, using depth and shadow to show their outline.'},
+  {title:'Different ways to take part',crop:[721,354,540,424],alt:'Concept rendering of a wheelchair user interacting with a large responsive wall.',text:'I want to explore how the same wall could respond to people walking, reaching or using a wheelchair or cane.'},
+  {title:'Architectural blueprints',crop:[1333,354,538,424],alt:'Concept rendering of hands exploring a changeable tactile architectural plan beside an arrow display.',text:'The moving blocks could also be used to explore tactile routes, changing signs and architectural plans by hand.'},
+];

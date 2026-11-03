@@ -1,0 +1,51 @@
+/* The hands belong to the page, extending past both viewport edges. */
+.split-stage{width:100%;max-width:none;padding:0}
+.split-window.reaching-hands{height:clamp(470px,46vw,740px);max-height:none;aspect-ratio:auto;border:0;border-radius:0;background:transparent;overflow:hidden}
+.reaching-hands__art{position:absolute;top:0;left:-4%;width:108%;max-width:none;height:auto;pointer-events:none}
+.reaching-hands .split-door{color:var(--ink);padding:28px max(var(--gutter),calc((100vw - 1540px)/2 + var(--gutter)));background:transparent;transition:color .35s}
+.reaching-hands .split-door[aria-pressed=true]{background:transparent}
+.reaching-hands .split-door:focus-visible{outline-color:var(--green);outline-offset:-8px}
+.reaching-hands .door-kicker{color:var(--soft);margin-bottom:10px}
+.reaching-hands .split-door strong{font-size:clamp(34px,3.8vw,58px);margin-bottom:10px}
+.reaching-hands .split-door strong em{font-size:clamp(19px,1.8vw,28px)}
+.reaching-hands .split-door--code strong{font-size:clamp(31px,3.4vw,53px)}
+.reaching-hands .split-door--code strong em{font-size:clamp(12px,1.2vw,18px)}
+.reaching-hands .door-description{color:var(--soft);margin-bottom:16px}
+.reaching-hands .door-enter{color:var(--green);border-color:var(--rule)}
+.reaching-hands .split-door[aria-pressed=true] .door-enter{color:var(--green);border-color:var(--green)}
+.reaching-hands .split-door:hover .door-enter>span{transform:translateY(3px)}
+.door-enter>span{transition:transform .25s}
+.split-stage .split-caption{padding:18px var(--gutter) 28px}
+.cat-shadow{position:absolute;width:110px;height:auto;pointer-events:none;color:#413e32;opacity:.16;filter:blur(2px);transform:skewX(-13deg);transform-origin:bottom center}
+.cat-shadow--hero{left:calc(50% - 54px);bottom:6%;z-index:2;opacity:.2;transition:transform .6s,opacity .6s}
+.reaching-hands[data-side=coder] .cat-shadow--hero{transform:skewX(10deg);opacity:.25;color:#c8d0b6}
+.contact{position:relative;isolation:isolate;overflow:hidden}
+.contact>.page-width{position:relative;z-index:1}
+.cat-shadow--contact{width:190px;right:21%;bottom:82px;opacity:.12;transform:skewX(-23deg) rotate(-6deg)}
+/* Square project media, including the gallery and Van Gogh cards in the reference. */
+.project-card .project-card__visual,.project-card .project-card__visual>img,.project-card .project-card__visual>video,
+.study .study__hero,.study .study__hero>img,.study .study__hero>video,
+.study .study-film video,.study .study-demo video,.study .screens img{border-radius:0}
+@media(max-width:1000px) and (min-width:721px){
+  .split-window.reaching-hands{height:clamp(440px,49vw,520px)}
+  .reaching-hands .split-door strong{font-size:39px}
+  .reaching-hands .split-door--code strong{font-size:36px}
+  .reaching-hands .split-door strong em{font-size:22px}
+  .cat-shadow--hero{width:85px;left:calc(50% - 42px)}
+}
+@media(max-width:720px){
+  .split-stage{padding:0}
+  .split-window.reaching-hands{height:clamp(370px,85vw,590px);min-height:0;background:transparent;border-radius:0}
+  .reaching-hands__art{width:130%;left:-15%;top:0;height:auto;object-fit:initial;mask-image:none}
+  .reaching-hands .split-door{padding:20px var(--gutter);justify-content:end}
+  .reaching-hands .door-kicker{font-size:6px;margin-bottom:9px}
+  .reaching-hands .split-door strong{font-size:31px;margin-bottom:11px}
+  .reaching-hands .split-door--code strong{font-size:28px}
+  .reaching-hands .split-door strong em{font-size:17px;line-height:1.2;max-width:135px;margin-top:7px}
+  .reaching-hands .split-door--code strong em{font-size:11px;line-height:1.45;margin-top:9px}
+  .reaching-hands .door-description{font-size:7px;max-width:135px;margin-bottom:13px}
+  .reaching-hands .door-enter{font-size:7px;gap:14px}
+  .cat-shadow--hero{width:46px;left:calc(50% - 23px);bottom:8%;opacity:.2}
+  .cat-shadow--contact{width:105px;right:21%;bottom:110px;opacity:.12}
+}
+@media(prefers-reduced-motion:reduce){.cat-shadow--hero,.door-enter>span{transition:none}}

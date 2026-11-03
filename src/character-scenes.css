@@ -1,0 +1,27 @@
+.nimra-character--hello{--scene-ratio:1145/1374;background-image:url('/media/nimra-holding-frosty-v3.webp');}
+.nimra-character--design{--scene-ratio:1254/1254;background-image:url('/media/nimra-design-studio.webp');}
+.nimra-chapter .nimra-character--design{background-image:url('/media/nimra-design-flows-v2.webp');}
+.nimra-character--maker{--scene-ratio:1254/1254;background-image:url('/media/nimra-leiriu-workbench.webp');}
+.nimra-character.nimra-character--illustrated{background-size:contain;background-position:center;aspect-ratio:var(--scene-ratio);clip-path:none}
+.nimra-chapter:nth-child(3) .nimra-actor,.nimra-chapter:nth-child(4) .nimra-actor{width:min(54%,calc(100svh - 270px));top:10%;right:-2%}
+.nimra-orbit--design .nimra-sketch,.nimra-orbit--design .nimra-paint-swipe,.nimra-orbit--make .nimra-blocks{display:none}
+.mk-studio-scene .mk-studio-artist{width:105%;margin-left:-4%;transform:none;padding-top:15%}
+.mk-studio-scene .mk-studio-cat-note{left:auto;right:-3%;bottom:4%;font-size:16px;transform:rotate(-4deg)}
+.mk-studio-easel{opacity:.75}
+.before-ask__character .nimra-character--hello{width:100%}
+.nimra-hello-note{top:2%;right:1%;z-index:5;padding:10px 14px;font-size:11px;line-height:1.6;background:var(--paper);border:1px solid var(--rule);transform:rotate(4deg);max-width:165px;box-shadow:3px 3px 0 #2527200c}
+.nimra-hello-note>span{font-size:28px;padding-left:5px}
+.nimra-chapter:nth-child(3) .nimra-actor{isolation:isolate}
+.nimra-chapter .nimra-character--design{position:relative;z-index:2}
+.design-knee-peek{position:absolute;right:15.5%;top:56%;width:15%;height:5%;z-index:1;overflow:hidden;pointer-events:none}
+.frosty--knee{position:absolute;left:-10%;top:0;width:140%;aspect-ratio:1.24;transform:translateY(calc((1 - var(--design-peek,1))*40%));will-change:transform}
+@media(max-width:720px){.nimra-hello-note{top:auto;bottom:12%;left:0;right:auto;font-size:9px;max-width:122px;padding:8px 10px}.nimra-hello-note>span{transform:none;font-size:22px}.frosty--skills{width:82px;flex-basis:82px}.skill-playground__after{min-height:82px;gap:12px}}
+@media(prefers-reduced-motion:reduce){.frosty--knee{transform:none;will-change:auto}}
+@media(min-width:1001px) and (min-height:761px){.nimra-chapter:nth-child(4) h2{font-size:clamp(80px,9.2vw,145px)}}
+@media(max-width:1000px) and (min-width:721px){.nimra-chapter:nth-child(3) .nimra-actor,.nimra-chapter:nth-child(4) .nimra-actor{width:55%;top:28%;right:-5%}}
+@media(max-width:720px){.nimra-chapter:nth-child(3) .nimra-actor,.nimra-chapter:nth-child(4) .nimra-actor{width:82%;top:auto;bottom:0;right:-8%}.mk-studio-scene .mk-studio-artist{width:109%;padding-top:12%}.mk-studio-scene .mk-studio-cat-note{right:-7%;bottom:1%;font-size:13px}.contact-page__characters .nimra-character--hello{width:100%}}
+@media(max-height:760px) and (min-width:721px){.nimra-chapter:nth-child(3) .nimra-actor,.nimra-chapter:nth-child(4) .nimra-actor{width:min(49%,calc(100svh - 225px));top:6%;right:0}}
+@media(prefers-reduced-motion:reduce){.nimra-chapter:nth-child(3) .nimra-actor,.nimra-chapter:nth-child(4) .nimra-actor{top:50px}}
+@media(prefers-reduced-motion:reduce) and (max-width:720px){.nimra-chapter:nth-child(3) .nimra-actor,.nimra-chapter:nth-child(4) .nimra-actor{top:auto;bottom:0}}
+
+.nimra-orbit--design{display:none}

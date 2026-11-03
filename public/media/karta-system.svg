@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+<title id="title">Karta Kiosk: proposed cart rental system</title><desc id="desc">Concept diagram of a kiosk at village reception, its Rent and Return screen, shared carts and the intended student ID, deposit and return flow.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#355743" stroke-opacity=".06"/></pattern><linearGradient id="side" x2="1" y2="1"><stop stop-color="#57735d"/><stop offset="1" stop-color="#2f4a38"/></linearGradient><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="m0 0 8 4-8 4" fill="none" stroke="#647a62" stroke-width="1.5"/></marker></defs>
+<rect width="1440" height="960" fill="#eeeede"/><rect width="1440" height="960" fill="url(#grid)"/>
+<g font-family="Arial,sans-serif" fill="#263d2e"><text x="72" y="75" font-size="15" letter-spacing="4">KARTA / CAMPUS CART RENTAL</text><text x="72" y="145" font-size="57" font-weight="700" letter-spacing="-2">A cart when you need one.</text><text x="1368" y="75" text-anchor="end" font-size="13" letter-spacing="2" fill="#69745e">CONCEPT DIAGRAM</text></g>
+<ellipse cx="534" cy="680" rx="405" ry="24" fill="#34533b" opacity=".08"/>
+<g stroke="#35523e" stroke-width="3" stroke-linejoin="round">
+<path d="m176 285 425-40 98 57v360l-425 38-98-57Z" fill="#d2dcc6"/>
+<path d="m601 245 98 57v360l-98-57Z" fill="url(#side)"/>
+<path d="m176 285 425-40v360l-425 38Z" fill="#9fb59a"/>
+<path d="m214 308 350-32v157l-350 32Z" fill="#f8f8ec"/>
+<path d="m214 490 350-32v127l-350 32Z" fill="#c8d4bb"/>
+<path d="m229 503 320-29v93l-320 29Z" fill="#e6eadb"/>
+<path d="m642 366 28 16v109l-28-16Z" fill="#243e2d"/>
+<path d="m642 545 31 18v24l-31-18Z" fill="#b7c9ac"/>
+</g>
+<g font-family="Arial,sans-serif" fill="#294632"><text x="243" y="337" font-size="18" font-weight="700" transform="rotate(-5 243 337)">KARTA KIOSK</text><text x="244" y="369" font-size="13" transform="rotate(-5 244 369)">What would you like to do?</text>
+<g transform="translate(245 387) rotate(-5)"><rect width="116" height="43" rx="5" fill="#355b43"/><text x="58" y="27" text-anchor="middle" fill="#fff" font-size="16">Rent</text><rect x="130" width="125" height="43" rx="5" fill="#e4e9d8" stroke="#82967b"/><text x="192" y="27" text-anchor="middle" font-size="16">Return</text></g>
+<text x="285" y="554" font-size="17" letter-spacing="2" transform="rotate(-5 285 554)">CART COLLECTION</text></g>
+<g fill="none" stroke="#465a43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="m805 540 212-13 22 86-218 14Z" fill="#ccd8bc"/><path d="m822 555 181-11 13 56-181 11Z" stroke-width="2"/><path d="m842 554 10 53m26-56 9 53m26-55 9 53m27-55 9 53m27-54 10 53" stroke-width="2"/><path d="m805 540-17-66-63 3m312 135 22 25m-234-11-13 24 216-15"/>
+<circle cx="850" cy="653" r="17" fill="#eeeede"/><circle cx="1018" cy="642" r="17" fill="#eeeede"/>
+</g>
+<g font-family="Arial,sans-serif" fill="#35513e"><text x="180" y="754" font-size="16" letter-spacing="2">AT THE VILLAGE RECEPTION</text><text x="775" y="718" font-size="16">Pull by hand or attach the handle to a bicycle</text><text x="988" y="290" font-size="17" font-weight="700">RETURN AT THE BACK</text><text x="988" y="321" font-size="15" fill="#62705c">The Return screen explains where to go.</text><path d="M967 308c-124-37-196 20-281 77" fill="none" stroke="#647a62" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="849" y="439" font-size="17" font-weight="700">ONE SHARED CART</text><path d="m892 453 17 56" fill="none" stroke="#647a62" stroke-width="2"/>
+</g>
+<g font-family="Arial,sans-serif"><g transform="translate(72 815)"><rect width="395" height="92" rx="8" fill="#fff" fill-opacity=".72" stroke="#c6d0b9"/><text x="23" y="31" fill="#75816a" font-size="12" letter-spacing="2">01 / START</text><text x="23" y="65" fill="#2b4632" font-size="23">Student ID + deposit</text></g><g transform="translate(522 815)"><rect width="395" height="92" rx="8" fill="#fff" fill-opacity=".72" stroke="#c6d0b9"/><text x="23" y="31" fill="#75816a" font-size="12" letter-spacing="2">02 / BORROW</text><text x="23" y="65" fill="#2b4632" font-size="23">Take a cart</text></g><g transform="translate(972 815)"><rect width="395" height="92" rx="8" fill="#fff" fill-opacity=".72" stroke="#c6d0b9"/><text x="23" y="31" fill="#75816a" font-size="12" letter-spacing="2">03 / FINISH</text><text x="23" y="65" fill="#2b4632" font-size="23">Return + deposit refund</text></g></g>
+<path d="M480 860h28m422 0h28" fill="none" stroke="#647a62" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,41 @@
+.skill-stacker{--tile-paper:#edeee4;--tile-ink:#25291f;--tile-line:#b9bcac;--paw:#efc5b0;--paw-line:#5d3c30}
+.stacker-controls{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:end}
+.skill-paw-start{display:flex;align-items:center;gap:12px;padding:0 0 8px;border-bottom:1px solid currentColor;font-size:11px;line-height:1.5;text-align:left}
+.skill-paw-start svg{width:30px;height:30px;color:var(--paw);transform:rotate(-12deg)}
+.stacker-explore{font-size:10px;border-bottom:1px solid currentColor;padding:0 0 7px}
+.skill-arena.skill-arena--explore,.skill-arena.skill-arena--game{display:block;position:relative;min-height:260px;height:340px;padding:0;overflow:hidden;touch-action:pan-y}
+.skill-arena.skill-arena--game{height:410px;min-height:410px;background:linear-gradient(transparent 95%,#c6c8bc08);margin-top:20px}
+.skill-chip{position:absolute;left:0;top:0;display:flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;font-size:11px;line-height:1.4;padding:8px 13px;border:1px solid var(--tile-line);border-radius:0;color:var(--tile-ink);background:var(--tile-paper);cursor:grab;touch-action:none;user-select:none;box-shadow:2px 3px 0 #0002;letter-spacing:-.01em}
+.skill-chip>span{font-size:12px;opacity:.8}.skill-chip:active{cursor:grabbing;z-index:8}.skill-chip:focus-visible{z-index:8;outline:2px solid #efbba7;outline-offset:2px}
+.skill-chip--engineering{background:#edeee4;color:#25291f;border-color:#b9bcac}.skill-chip--design{background:#d2886b;color:#201d18;border-color:#e5ad94}.skill-chip--creative{background:#acb9a2;color:#1d261b;border-color:#cbd7c0}
+.stacker-score{position:absolute;top:5px;left:0;right:0;display:flex;justify-content:space-between;gap:20px;font:10px var(--mono);color:inherit;pointer-events:none}
+.stacker-guide{position:absolute;top:55px;bottom:25px;left:50%;width:1px;border-left:1px dashed #c6c8bc35;pointer-events:none}
+.stacker-platform{position:absolute;width:220px;height:8px;bottom:17px;left:calc(50% - 110px);border:1px solid #c6c8bc;background:#c6c8bc55}
+.stack-skill{position:absolute;left:0;top:0;width:170px;height:32px;border:1px solid;display:flex;align-items:center;justify-content:center;padding:0 8px;box-shadow:2px 3px 0 #0002;font-size:11px;line-height:1.25;white-space:nowrap;user-select:none}
+.stack-skill--active{z-index:4}
+.stack-paw{position:absolute;left:0;top:0;width:50px;height:50px;padding:5px;color:var(--paw);z-index:5;cursor:pointer;filter:drop-shadow(0 2px 0 #201c1922)}
+.stack-paw svg{width:100%;height:100%}.stack-paw[aria-disabled=true]{opacity:.4;cursor:default}.stack-paw:focus-visible{outline:2px dashed currentColor;outline-offset:3px}
+.stacker-keyboard{position:absolute;left:0;bottom:0;margin:0;font:9px var(--mono);color:inherit;pointer-events:none}
+.stacker-result{position:absolute;top:45px;left:50%;transform:translateX(-50%);width:240px;padding:18px 20px;text-align:center;z-index:7;background:#eeeadd;color:#24271e;border:1px solid #a9ab9b;box-shadow:5px 6px 0 #0002}
+.stacker-result strong{display:block;font:italic 27px/1.05 var(--serif);margin-bottom:15px}.stacker-result button{font-size:11px;border-bottom:1px solid currentColor;padding-bottom:5px}
+.skill-stacker .skill-playground__caption{min-height:25px;line-height:1.8;font-size:11px;opacity:1}
+.skill-playground__after{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:95px;margin-top:10px}
+.skill-playground__after .skill-playground__caption{flex:1;margin:0}
+.frosty--skills{flex:0 0 112px;width:112px;z-index:1;transform:none}
+.recognition-image--static,.recognition-image--static img{cursor:default;transform:none!important;transition:none!important}
+.stacker-skill-index{font-size:10px;line-height:2;color:inherit;opacity:.85;margin:18px 0 0;max-width:1000px}
+.skill-stacker .skill-playground__head .mono{font-size:10px;line-height:1.7;opacity:1}.skill-stacker .skill-playground__head p:last-child{font-size:13px;line-height:1.7}
+html[data-view=meraki] .contact,html[data-view=meraki] .contact-bottom p,html[data-view=meraki] .contact-bottom a,html[data-view=meraki] .contact .eyebrow,html[data-view=meraki] .skill-playground__head,html[data-view=meraki] .skill-playground__caption,html[data-view=meraki] .stacker-skill-index{color:#283347;opacity:1}
+html[data-view=meraki] .contact-bottom p,html[data-view=meraki] .contact-bottom a{font-size:13px;line-height:1.9}
+html[data-view=meraki] .contact .eyebrow{font-size:10px;line-height:1.7}
+html[data-view=meraki] .skill-stacker{--paw:#a24d3a;--paw-line:#fff4df;border-top-color:#697d90}
+html[data-view=meraki] .skill-stacker .skill-playground__head .mono{font-size:11px;color:#283347}
+html[data-view=meraki] .contact-arrow{color:#283347;border-color:#667c91}
+html[data-view=meraki] .stacker-score,html[data-view=meraki] .stacker-keyboard{color:#283347}
+html[data-view=meraki] .stacker-platform{background:#7a91a8;border-color:#526b83}
+html[data-view=meraki] .stacker-guide{border-color:#627d9470}
+html[data-view=meraki] .skill-arena{border-color:#697d90}
+html[data-view=meraki] .skill-chip:focus-visible{outline-color:#a24d3a}
+html[data-view=meraki] .foot{font-size:10px;line-height:1.8}
+@media(max-width:720px){.stacker-controls{gap:12px;max-width:145px}.skill-paw-start{font-size:10px;gap:8px}.skill-paw-start svg{width:26px;height:26px;flex-shrink:0}.stacker-explore{font-size:9px}.skill-stacker .skill-playground__head .mono{font-size:9px;max-width:175px}.skill-stacker .skill-playground__head p:last-child{font-size:12px;line-height:1.5;max-width:170px}.skill-chip{font-size:11px;padding:8px 10px;gap:7px}.skill-chip>span{font-size:11px}.skill-arena.skill-arena--game{height:410px;min-height:410px}.stacker-score{font-size:9px}.skill-stacker .skill-playground__caption{font-size:10px;line-height:1.8;margin-top:14px}.stacker-skill-index{font-size:10px;line-height:1.9}.stacker-keyboard{font-size:8px}html[data-view=meraki] .contact-bottom p,html[data-view=meraki] .contact-bottom a{font-size:11px;line-height:1.9}html[data-view=meraki] .contact .eyebrow{font-size:9px}html[data-view=meraki] .skill-stacker .skill-playground__head .mono{font-size:10px}html[data-view=meraki] .foot{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.stack-paw,.stack-skill,.skill-chip{transition:none;animation:none;will-change:auto}}

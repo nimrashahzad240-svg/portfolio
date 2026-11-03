@@ -1,0 +1,203 @@
+/* ══════════════════════════════════════════════════════════════════════
+   JBL ADVERT — a page that travels through time.
+
+   Three chapters, three decades. Each one brings its own typeface and its
+   own palette, and the whole page tints towards the chapter sitting in
+   the middle of the screen. The treatment is the brand-heritage editorial
+   idea: a big year, a rule, a photograph, and type that belongs to the
+   decade rather than to the website.
+   ════════════════════════════════════════════════════════════════════ */
+
+html[data-project="jbl-advert"]{
+  --paper:#e4e1da;
+  --card:#edebe5;
+  --ink:#16181a;
+  --soft:#6b7076;
+  --faint:#8a8f95;
+  --rule:#c3c0b8;
+  --green:#2a2d30;
+  --rust:#8a6a4e;
+  background:#e4e1da;
+  color-scheme:light;
+}
+
+.study.study--jbl-advert{
+  position:relative;isolation:isolate;overflow:clip;
+  background:var(--era-paper,#e4e1da);
+  color:var(--era-ink,#16181a);
+  transition:background-color 1.1s ease, color 1.1s ease;
+}
+
+/* the three palettes the page travels between ─────────────────────── */
+.study--jbl-advert{
+  --era-paper:#e4e1da; --era-ink:#16181a; --era-accent:#6f757b;
+  --era-rule:#c3c0b8;  --era-soft:#6b7076;
+}
+.study--jbl-advert[data-era="1"]{            /* silver gelatin */
+  --era-paper:#e2dfd8; --era-ink:#15171a; --era-accent:#70767c;
+  --era-rule:#c0bdb5;  --era-soft:#656a70;
+  --paper:#e2dfd8; --ink:#15171a; --rule:#c0bdb5; --soft:#656a70;
+  --green:#70767c; --rust:#70767c; --card:#eceae4; --sage:#d7d4cc;
+}
+.study--jbl-advert[data-era="2"]{            /* sun through a skylight */
+  --era-paper:#f0e6d3; --era-ink:#3b2a1b; --era-accent:#c2602c;
+  --era-rule:#d8c6a6;  --era-soft:#7a6348;
+  --paper:#f0e6d3; --ink:#3b2a1b; --rule:#d8c6a6; --soft:#7a6348;
+  --green:#c2602c; --rust:#c2602c; --card:#f6eee0; --sage:#e6d8bd;
+}
+.study--jbl-advert[data-era="3"]{            /* brick, sky, now */
+  --era-paper:#111315; --era-ink:#f3f4f5; --era-accent:#ff6a13;
+  --era-rule:#2a2f34;  --era-soft:#99a1a9;
+  --paper:#111315; --ink:#f3f4f5; --rule:#2a2f34; --soft:#99a1a9;
+  --green:#ff6a13; --rust:#ff6a13; --card:#191d21; --sage:#1b2024;
+  color-scheme:dark;
+}
+.study--jbl-advert[data-era="3"] .chips li{background:#191d21}
+.study--jbl-advert[data-era="3"] .sect th{background:#191d21}
+.study--jbl-advert[data-era="3"] .note{background:#1b2024}
+
+/* film grain, so every era shares one surface ──────────────────────── */
+.study--jbl-advert::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.5'/></svg>");
+  mix-blend-mode:multiply;
+}
+.study--jbl-advert[data-era="3"]::before{mix-blend-mode:screen;opacity:.1}
+
+/* chrome, following whichever era is on screen ─────────────────────── */
+.study--jbl-advert .study__bar{
+  background:color-mix(in srgb, var(--era-paper) 92%, transparent);
+  border-bottom:1px solid var(--era-rule);
+  transition:background-color 1.1s ease, border-color 1.1s ease;
+}
+.study--jbl-advert .study__back,
+.study--jbl-advert .study__close,
+.study--jbl-advert .eyebrow,
+.study--jbl-advert figcaption,
+.study--jbl-advert .facts dt,
+.study--jbl-advert .study-summary dt,
+.study--jbl-advert .specs dt{color:var(--era-soft);transition:color 1.1s ease}
+.study--jbl-advert .study__close{border-color:var(--era-rule)}
+.study--jbl-advert .sect,
+.study--jbl-advert .study__quick-facts,
+.study--jbl-advert .study__gallery,
+.study--jbl-advert .study__next,
+.study--jbl-advert .facts dl>div,
+.study--jbl-advert .specs>div{border-color:var(--era-rule);transition:border-color 1.1s ease}
+.study--jbl-advert .sect p,
+.study--jbl-advert .sect li,
+.study--jbl-advert .facts dd,
+.study--jbl-advert .study-summary dd{color:var(--era-ink);opacity:.82;transition:color 1.1s ease}
+.study--jbl-advert .sect h3,
+.study--jbl-advert .study__next button{color:var(--era-accent);transition:color 1.1s ease}
+.study--jbl-advert .chips li{
+  border-color:var(--era-rule);color:var(--era-ink);background:transparent;
+  transition:border-color 1.1s ease, color 1.1s ease;
+}
+.study--jbl-advert .report-link{border-color:var(--era-accent);color:var(--era-accent)}
+.study--jbl-advert .report-link:hover{background:var(--era-accent);color:var(--era-paper)}
+.study--jbl-advert .study__hero,
+.study--jbl-advert .study-film video,
+.study--jbl-advert .study-demo video{background:#0c0d0e;border-radius:3px}
+
+/* the masthead, set like an advert ─────────────────────────────────── */
+.study--jbl-advert .study__title{
+  font-family:'Archivo','DM Sans',sans-serif;
+  font-weight:700;text-transform:uppercase;letter-spacing:-.045em;
+  color:var(--era-ink);transition:color 1.1s ease;
+}
+.study--jbl-advert .study__q{
+  font-family:'Bodoni Moda',Georgia,serif;font-style:italic;
+  color:var(--era-accent);transition:color 1.1s ease;
+}
+
+/* ── the chapters ───────────────────────────────────────────────────── */
+.eras{margin-top:58px;padding-top:40px;border-top:1px solid var(--era-rule)}
+.eras__intro{max-width:620px;margin-bottom:60px}
+.eras__intro h3{
+  font-family:'Bodoni Moda',Georgia,serif;font-weight:400;
+  font-size:clamp(34px,4.6vw,60px);line-height:1.06;letter-spacing:-.02em;
+  margin:0 0 20px;color:var(--era-ink);transition:color 1.1s ease;
+}
+.eras__intro h3 em{font-style:italic;color:var(--era-accent);transition:color 1.1s ease}
+.eras__standfirst{font-size:13px;line-height:1.85;color:var(--era-soft);margin:0;max-width:430px}
+
+.era{padding:52px 0 64px;border-top:1px solid var(--era-rule);transition:border-color 1.1s ease}
+.era__rule{
+  display:flex;justify-content:space-between;gap:20px;
+  font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--era-soft);padding-bottom:16px;transition:color 1.1s ease;
+}
+.era__year{
+  display:flex;align-items:baseline;gap:clamp(12px,2.4vw,30px);flex-wrap:wrap;
+  margin:0 0 34px;line-height:.92;color:var(--era-ink);transition:color 1.1s ease;
+}
+.era__year-num{font-size:clamp(58px,10vw,142px);letter-spacing:-.03em;display:block}
+.era__year-word{
+  font-family:var(--mono);font-size:clamp(9px,1.1vw,12px);letter-spacing:.3em;
+  text-transform:uppercase;color:var(--era-accent);transition:color 1.1s ease;
+}
+.era__grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,4.5vw,64px);align-items:start}
+.era__shot{margin:0}
+.era__shot img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-radius:2px}
+.era__shot figcaption{font-size:9px;line-height:1.75;color:var(--era-soft);padding-top:12px;transition:color 1.1s ease}
+.era__copy p{margin:0 0 18px;font-size:13px;line-height:1.9;color:var(--era-ink);opacity:.84;transition:color 1.1s ease}
+.era__lead{font-size:17px!important;line-height:1.6!important;opacity:1!important;letter-spacing:-.015em}
+.era__spec{margin:26px 0 0;border-top:1px solid var(--era-rule);transition:border-color 1.1s ease}
+.era__spec>div{display:grid;grid-template-columns:86px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid var(--era-rule)}
+.era__spec dt{font-family:var(--mono);font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:var(--era-soft)}
+.era__spec dd{margin:0;font-size:11px;line-height:1.7;color:var(--era-ink);opacity:.86}
+
+/* ── ERA 1 · the black-and-white one ────────────────────────────────── */
+.era[data-era="1"] .era__year-num{
+  font-family:'Bodoni Moda',Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.01em;
+}
+.era[data-era="1"] .era__lead{font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-size:21px!important}
+.era[data-era="1"] .era__shot img{filter:grayscale(1) contrast(1.12)}
+
+/* ── ERA 2 · the floral one ─────────────────────────────────────────── */
+.era[data-era="2"] .era__year-num{
+  font-family:'Abril Fatface',Georgia,serif;font-weight:400;letter-spacing:-.02em;
+}
+.era[data-era="2"] .era__lead{font-family:'Abril Fatface',Georgia,serif;font-size:24px!important;line-height:1.3!important;letter-spacing:-.01em}
+.era[data-era="2"] .era__shot img{filter:sepia(.26) saturate(1.1) contrast(.97)}
+
+/* ── ERA 3 · now ────────────────────────────────────────────────────── */
+.era[data-era="3"] .era__year-num{
+  font-family:'Archivo','DM Sans',sans-serif;font-weight:700;
+  text-transform:uppercase;letter-spacing:-.05em;
+}
+.era[data-era="3"] .era__lead{
+  font-family:'Archivo','DM Sans',sans-serif;font-weight:600;
+  font-size:19px!important;letter-spacing:-.02em;
+}
+.era[data-era="3"] .era__shot img{filter:saturate(1.08) contrast(1.04)}
+
+.eras__out{
+  font-family:'Bodoni Moda',Georgia,serif;font-style:italic;
+  font-size:clamp(19px,2.4vw,28px);line-height:1.45;max-width:640px;
+  margin:44px 0 0;padding-top:34px;border-top:1px solid var(--era-rule);
+  color:var(--era-ink);transition:color 1.1s ease,border-color 1.1s ease;
+}
+
+/* The chapters do their moving through colour and type, not displacement:
+   an --sy offset accumulates down a long page and would drag the photo
+   up over its own year. The masthead keeps a little drift instead. */
+.study--jbl-advert .study__head{will-change:transform;transform:translate3d(0,calc(var(--sy,0) * 0.08px),0)}
+.study--jbl-advert .study__hero{will-change:transform;transform:translate3d(0,calc(var(--sy,0) * -0.03px),0)}
+
+@media (prefers-reduced-motion: reduce){
+  .study--jbl-advert,
+  .study--jbl-advert *{transition-duration:.01ms!important}
+  .study--jbl-advert .study__head,
+  .study--jbl-advert .study__hero{transform:none}
+}
+
+@media (max-width:860px){
+  .era__grid{grid-template-columns:1fr;gap:26px}
+  .era{padding:38px 0 46px}
+  .era__year{margin-bottom:24px}
+  .study--jbl-advert .study__head,
+  .study--jbl-advert .study__hero{transform:none}
+  .era__spec>div{grid-template-columns:76px minmax(0,1fr);gap:12px}
+}

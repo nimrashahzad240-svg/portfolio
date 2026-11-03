@@ -1,0 +1,95 @@
+/* One character, four chapters. Native scrolling drives a pinned stage. */
+.nimra-story{height:340svh;min-height:2200px;position:relative;background:var(--paper)}
+.nimra-stage{position:sticky;top:0;height:calc(100svh - 90px);min-height:670px;max-height:1200px;padding:26px var(--gutter) 0;overflow:hidden;--journey-progress:0;--scene-drift:0;--actor-x:0px;--actor-turn:0deg}
+.nimra-running{display:flex;justify-content:space-between;gap:28px;font-size:8px;color:var(--soft);position:relative;z-index:4}
+.nimra-running>span:last-child{display:flex;align-items:center;gap:12px;text-align:right}
+.nimra-running i{width:5px;height:5px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px #b9472c14}
+.nimra-scenes{position:relative;height:calc(100% - 112px);max-width:1500px;margin:auto;isolation:isolate}
+.nimra-chapter{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s;pointer-events:none}
+.nimra-chapter[data-active=true]{opacity:1;visibility:visible}
+.nimra-chapter__copy{position:relative;z-index:3;top:15%;max-width:62%}
+.nimra-chapter__copy>.mono{font-size:9px;letter-spacing:.035em;color:var(--accent);margin-bottom:30px}
+.nimra-chapter h1,.nimra-chapter h2{font-family:var(--serif);font-size:clamp(88px,10.6vw,165px);line-height:.89;font-weight:400;letter-spacing:-.06em;margin:0 0 30px}
+.nimra-chapter h1{font-size:clamp(110px,13.5vw,205px)}
+.nimra-chapter h1 em{font-style:normal}
+.nimra-chapter h2 em{color:var(--accent)}
+.nimra-chapter__lede{font-size:18px;line-height:1.5;letter-spacing:-.02em;max-width:380px;margin-bottom:14px}
+.nimra-chapter__aside{font-size:11px;line-height:1.8;color:var(--soft);max-width:330px;margin:0}
+.nimra-character{display:block;width:100%;aspect-ratio:1145/1374;background-image:url('/media/nimra-character-poses-v3.webp');background-size:200% 200%;background-position:var(--sprite-x) var(--sprite-y);background-repeat:no-repeat;pointer-events:none}
+.nimra-character[data-pose="3"]{clip-path:inset(0 0 0 10%)}
+.nimra-character[data-pose="2"]{clip-path:inset(5% 0 0 0)}
+.nimra-actor{position:absolute;right:-1%;top:5%;width:48.5%;transform:translate3d(var(--actor-x),calc(var(--scene-drift)*-12px),0) rotate(var(--actor-turn));transform-origin:50% 85%;will-change:transform;z-index:2}
+.nimra-chapter[data-active=true] .nimra-actor .nimra-character{animation:nimra-arrive .65s cubic-bezier(.2,.7,.2,1) both}
+@keyframes nimra-arrive{from{opacity:0;transform:translateY(22px) rotate(-3deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+.nimra-ground{position:absolute;bottom:11%;right:0;width:43%;height:1px;background:var(--ink);z-index:0;opacity:.3;transform:rotate(-5deg)}
+.nimra-ground:before{content:'';position:absolute;left:12%;bottom:12px;width:68%;height:35px;background:radial-gradient(ellipse,#292b272a,transparent 70%);transform:rotate(5deg)}
+.nimra-ground>span{position:absolute;top:15px;left:8%;font:7px var(--mono);letter-spacing:.07em}
+.nimra-scenes>.cat-shadow--journey{position:absolute;width:86px;right:44%;left:auto;bottom:7%;opacity:.28;z-index:1;pointer-events:none}
+.nimra-hello-note{display:block;position:absolute;top:8%;right:9%;font-size:9px;line-height:1.6;transform:rotate(7deg);transition:opacity .3s}
+.nimra-hello-note>span{display:block;font:42px var(--serif);padding-left:35px}
+.nimra-stage:not([data-chapter="0"]) .nimra-hello-note{opacity:0}
+.nimra-orbit{position:absolute;right:3%;top:9%;width:310px;z-index:0;opacity:0;transform:translateY(40px) rotate(5deg);transition:opacity .5s,transform .8s;pointer-events:none}
+.nimra-orbit>.mono{font-size:7px;letter-spacing:.025em;display:block;margin-bottom:18px;color:var(--soft)}
+.nimra-stage[data-chapter="1"] .nimra-orbit--code,.nimra-stage[data-chapter="2"] .nimra-orbit--design,.nimra-stage[data-chapter="3"] .nimra-orbit--make{opacity:1;transform:translateY(calc(var(--scene-drift)*18px)) rotate(-6deg)}
+.nimra-orbit--code{padding:20px 25px;background:#dedfd7;border:1px solid #babdb2;box-shadow:10px 10px 0 #1d1e1b08}
+.nimra-orbit--code pre{font:12px/1.8 var(--mono);color:#46503c;margin:0}.nimra-orbit--code b{color:var(--accent);font-weight:400}
+.nimra-terminal-cursor{display:block;width:7px;height:13px;background:var(--accent);margin:5px 0;animation:terminal-blink 1.3s steps(1) infinite}
+@keyframes terminal-blink{50%{opacity:0}}
+.nimra-orbit--design{right:2%;width:280px}.nimra-sketch{position:relative;width:240px;height:200px;border:1px solid var(--ink);transform:rotate(3deg);background:#f2efe7;box-shadow:10px 10px 0 #b9472c17}
+.nimra-sketch i{position:absolute;border:1px solid var(--accent);width:53px;height:53px;top:30px;left:30px;border-radius:50%}.nimra-sketch i:nth-child(2){width:90px;height:20px;left:104px;top:45px;border-radius:0}.nimra-sketch i:nth-child(3){width:165px;height:63px;left:30px;top:104px;border-radius:0}.nimra-sketch span{position:absolute;right:-30px;bottom:0;font:italic 35px var(--serif);color:var(--accent);transform:rotate(-12deg)}
+.nimra-paint-swipe{position:absolute;top:80px;right:-20px;width:70px;height:110px;background:var(--accent);clip-path:polygon(10% 0,84% 4%,100% 89%,14% 100%,0 18%);opacity:.18;transform:rotate(18deg)}
+.nimra-orbit--make{right:0;top:12%;width:270px}.nimra-blocks{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;transform:perspective(600px) rotateY(-20deg) rotateX(10deg)}
+.nimra-blocks i{aspect-ratio:1;background:#d8d4c7;box-shadow:4px 5px 0 #a6a498;transform:translateY(calc(sin(var(--block-i)*1.4 + var(--journey-progress)*12)*12px));border:1px solid #f2efe3}.nimra-blocks i:nth-child(4n){background:var(--accent);box-shadow:4px 5px 0 #8a412f}
+.nimra-stage__foot{position:absolute;bottom:25px;left:var(--gutter);right:var(--gutter);display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--rule);padding-top:20px;gap:20px;z-index:5}
+.nimra-stage__foot nav{display:flex;gap:32px}.nimra-stage__foot nav button{font-size:11px;padding:4px 0;display:flex;align-items:baseline;gap:10px;color:var(--soft)}
+.nimra-stage__foot nav button>span{font:7px var(--mono)}.nimra-stage__foot nav button[aria-current=step]{color:var(--accent)}
+.nimra-work-link{font-size:11px;padding:4px 0;display:flex;gap:30px;align-items:center}.nimra-work-link>span{font-size:25px}
+.nimra-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--rule)}.nimra-progress>span{display:block;height:100%;background:var(--accent);transform:scaleX(var(--journey-progress));transform-origin:left}
+
+/* A personal FAQ: wit without making the opportunity hard to find. */
+.before-ask{border-top:1px solid var(--rule);padding-top:74px;padding-bottom:100px;display:grid;grid-template-columns:.8fr 2fr;gap:6%}
+.before-ask__intro>.eyebrow{font-size:8px;max-width:200px}.before-ask h2{font:400 clamp(58px,6.3vw,92px)/.91 var(--serif);letter-spacing:-.045em;margin:0;color:var(--accent)}
+.before-ask__grid{display:grid;grid-template-columns:1fr 1fr;gap:50px 48px;padding-top:6px}
+.before-ask__grid article>.mono{font-size:8px;color:var(--accent);display:block;margin-bottom:15px}
+.before-ask__grid h3{font-size:clamp(20px,2.2vw,30px);line-height:1.12;letter-spacing:-.045em;max-width:280px;margin:0 0 15px;font-weight:500}
+.before-ask__grid p{font-size:12px;line-height:1.8;color:var(--soft);max-width:310px;margin:0}
+.before-ask__grid .before-ask__punchline{font-size:14px;color:var(--ink);margin-bottom:7px;font-weight:500}
+.before-ask__character{position:relative;display:block;width:230px;max-width:100%;margin:25px -25px 0;text-align:left;padding:0}
+.before-ask__character .nimra-character{transition:transform .35s;transform-origin:50% 85%}.before-ask__character:hover .nimra-character{transform:rotate(-5deg)}
+.before-ask__character>.mono{display:block;font-size:6px;line-height:1.7;text-align:center;max-width:210px;color:var(--soft);margin-top:0}
+.before-ask__bubble{position:absolute;right:-20px;top:22px;max-width:140px;padding:12px 15px;background:var(--ink);color:var(--paper);font:italic 19px/1.1 var(--serif);transform:rotate(6deg);box-shadow:4px 4px 0 #b9472c25}
+.before-ask__bubble:after{content:'';position:absolute;bottom:-8px;left:15px;border-top:9px solid var(--ink);border-right:10px solid transparent}
+
+/* A bounded, optional playground. Contact details stay outside the canvas. */
+.skill-playground{position:relative;z-index:2;margin-top:55px;border-top:1px solid var(--contact-rule,#64675d);padding-top:25px}
+.skill-playground__head{display:flex;justify-content:space-between;align-items:start;gap:20px}
+.skill-playground__head .mono{font-size:7px;letter-spacing:.05em;color:inherit;opacity:.65;margin-bottom:10px}.skill-playground__head p:last-child{font-size:13px;margin:0}
+.skill-cat-button{display:flex;align-items:center;gap:12px;font-size:10px;border-bottom:1px solid currentColor;padding:0 0 8px;position:relative;z-index:3}.skill-cat-button>span:first-child{color:#de987e;font-size:26px}
+.skill-arena{position:relative;min-height:270px;height:290px;overflow:hidden;margin-top:10px;border-bottom:1px solid #c6c8bc55}
+.skill-token{position:absolute;left:0;top:0;padding:16px 24px;border:1px solid #c5c6b8;color:#eae9df;background:#34372f;border-radius:0;font-size:16px;letter-spacing:-.025em;white-space:nowrap;display:flex;gap:15px;align-items:center;cursor:grab;touch-action:none;user-select:none;will-change:transform;box-shadow:3px 4px 0 #0002}
+.skill-token:active{cursor:grabbing;z-index:4}.skill-token>span{font:20px var(--mono);font-weight:400}.skill-token:focus-visible{z-index:5;outline-color:#e6b29e;outline-offset:-4px}
+.skill-token--1,.skill-token--5{background:#c36447;border-color:#c36447;color:#fff4eb}.skill-token--2{background:#dedfd3;color:#24271f;border-color:#dedfd3}.skill-token--4{background:#807c6b;border-color:#aaa795}
+.skill-playground__caption{font:8px/1.6 var(--mono);margin:12px 0 0;color:inherit;opacity:.7}
+.contact:has(.skill-playground)>.cat-shadow{bottom:115px!important;right:10%!important;width:135px!important;opacity:.3!important;z-index:1}
+
+@media(min-width:1540px){.nimra-stage{padding-left:max(var(--gutter),calc((100vw - 1540px)/2 + var(--gutter)));padding-right:max(var(--gutter),calc((100vw - 1540px)/2 + var(--gutter)))}}
+@media(max-width:1000px) and (min-width:721px){.nimra-chapter__copy{top:20%;max-width:65%}.nimra-chapter h1{font-size:145px}.nimra-chapter h2{font-size:100px}.nimra-chapter__lede{max-width:290px;font-size:16px}.nimra-chapter__aside{max-width:270px}.nimra-actor{top:23%;width:53%;right:-5%}.nimra-orbit{width:235px;right:1%;top:10%}.nimra-hello-note{right:8%;top:10%}.before-ask{grid-template-columns:.65fr 2fr;gap:4%}.before-ask__grid{gap:38px 30px}.before-ask__character{width:190px;margin-left:-20px}.before-ask__bubble{right:-10px;font-size:17px;max-width:120px}}
+@media(max-width:720px){
+ .nimra-story{height:300svh;min-height:1850px}.nimra-stage{height:calc(100svh - 75px);min-height:650px;padding:22px var(--gutter) 0;max-height:none}
+ .nimra-running{font-size:6px;line-height:1.8;gap:20px}.nimra-running>span:first-child{max-width:160px}.nimra-running>span:last-child{max-width:130px;gap:8px}.nimra-running i{flex-shrink:0;width:4px;height:4px}
+ .nimra-scenes{height:calc(100% - 110px)}.nimra-chapter__copy{top:7%;max-width:100%}.nimra-chapter__copy>.mono{font-size:7px;margin-bottom:20px}.nimra-chapter h1{font-size:clamp(82px,22vw,140px);margin-bottom:19px;line-height:.86}.nimra-chapter h2{font-size:clamp(62px,15.5vw,100px);margin-bottom:18px;line-height:.9}
+ .nimra-chapter__lede{font-size:13px;max-width:260px;line-height:1.5;margin-bottom:10px}.nimra-chapter__aside{font-size:9px;max-width:220px;line-height:1.65}
+ .nimra-actor{width:63%;right:-5%;top:auto;bottom:-3%;transform:translate3d(calc(var(--actor-x)*.35),calc(var(--scene-drift)*-6px),0) rotate(var(--actor-turn))}.nimra-hello-note{top:auto;bottom:20%;left:1%;right:auto;font-size:7px;max-width:100px}.nimra-hello-note>span{transform:rotate(-90deg);font-size:30px;padding-left:0}
+ .nimra-ground{bottom:4%;width:70%;right:-7%}.nimra-scenes>.cat-shadow--journey{width:53px;right:56%;bottom:3%}.nimra-ground>span{font-size:5px;left:10%;top:12px}.nimra-orbit{top:auto;bottom:15%;left:0;right:auto;width:135px;transform:translateY(15px) rotate(5deg)}.nimra-orbit>.mono{font-size:5px;max-width:120px;margin-bottom:10px}.nimra-orbit--code{padding:12px 10px;bottom:13%}.nimra-orbit--code pre{font-size:7px}.nimra-terminal-cursor{width:4px;height:7px}.nimra-sketch{width:123px;height:107px}.nimra-sketch i{width:26px;height:26px;left:12px;top:16px}.nimra-sketch i:nth-child(2){width:53px;height:12px;left:49px;top:22px}.nimra-sketch i:nth-child(3){width:90px;height:33px;left:12px;top:58px}.nimra-sketch span{font-size:21px;right:-15px}.nimra-paint-swipe{width:40px;height:55px;top:50px;right:0}.nimra-orbit--make{width:133px;bottom:16%}.nimra-blocks{gap:4px}.nimra-blocks i{box-shadow:2px 3px 0 #a6a498;transform:none}.nimra-blocks i:nth-child(4n){box-shadow:2px 3px 0 #8a412f}
+ .nimra-stage__foot{bottom:22px;padding-top:15px;gap:12px;align-items:center}.nimra-stage__foot nav{gap:15px}.nimra-stage__foot nav button{display:block;font-size:9px;text-align:left}.nimra-stage__foot nav button>span{display:block;font-size:6px;margin-bottom:6px}.nimra-work-link{font-size:9px;gap:8px;max-width:90px;text-align:left}.nimra-work-link>span{font-size:21px}
+ .before-ask{display:block;padding-top:45px;padding-bottom:55px}.before-ask__intro{position:relative;min-height:210px;padding-bottom:35px}.before-ask__intro>.eyebrow{font-size:7px;max-width:180px}.before-ask h2{font-size:66px;max-width:200px}.before-ask__character{position:absolute;right:-22px;top:5px;width:185px;max-width:50%;margin:0}.before-ask__bubble{font-size:15px;max-width:110px;right:0;top:0;padding:9px 10px}.before-ask__character>.mono{font-size:5px;max-width:150px;margin-top:0}.before-ask__grid{gap:32px 23px;grid-template-columns:1fr 1fr}.before-ask__grid h3{font-size:22px;line-height:1.12;margin-bottom:12px}.before-ask__grid article>.mono{font-size:7px;margin-bottom:12px}.before-ask__grid p{font-size:11px;line-height:1.75}.before-ask__grid .before-ask__punchline{font-size:12px;line-height:1.5;margin-bottom:7px}
+ .skill-playground{margin-top:35px;padding-top:20px}.skill-playground__head{gap:16px}.skill-playground__head .mono{font-size:6px;max-width:170px}.skill-playground__head p:last-child{font-size:11px}.skill-cat-button{font-size:8px;gap:7px;max-width:125px;line-height:1.5;text-align:left}.skill-cat-button>span:first-child{font-size:21px}.skill-arena{height:300px;margin-top:20px}.skill-token{font-size:12px;padding:12px 15px;gap:10px}.skill-token>span{font-size:17px}.skill-playground__caption{font-size:6px;line-height:1.7}.contact:has(.skill-playground)>.cat-shadow{width:100px!important;right:7%!important;bottom:130px!important}
+}
+@media(max-height:760px) and (min-width:721px){.nimra-stage{min-height:620px}.nimra-chapter__copy{top:11%}.nimra-chapter h1{font-size:145px}.nimra-chapter h2{font-size:110px}.nimra-chapter__copy>.mono{margin-bottom:20px}.nimra-chapter__lede{font-size:15px}.nimra-chapter__aside{font-size:10px}.nimra-actor{top:0;width:44%;right:2%}.nimra-orbit{top:4%;width:260px}.nimra-hello-note{top:4%}}
+@media(max-width:360px){.nimra-stage__foot nav{gap:10px}.before-ask__grid{grid-template-columns:1fr}.before-ask__character{width:150px;right:-12px}.before-ask h2{font-size:58px}.before-ask__intro>.eyebrow{max-width:140px}.nimra-chapter__lede{max-width:240px}}
+@media(prefers-reduced-motion:reduce){
+ .skill-arena{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-content:start;height:auto;min-height:250px;padding:25px 12px}
+ .skill-token{position:relative;left:auto;top:auto;transform:none!important;white-space:normal;width:fit-content;max-width:100%;will-change:auto;cursor:pointer}
+ .nimra-story{height:auto;min-height:0}.nimra-stage{position:relative;height:auto;min-height:0;max-height:none;padding-bottom:25px}.nimra-scenes{height:auto}.nimra-chapter{position:relative;opacity:1;visibility:visible;transition:none;min-height:500px;border-bottom:1px solid var(--rule);padding:45px 0 30px}.nimra-chapter__copy{top:0}.nimra-chapter h1{font-size:clamp(90px,12vw,180px)}.nimra-chapter h2{font-size:clamp(70px,9vw,130px)}.nimra-actor{top:40px;bottom:auto;transform:none!important;will-change:auto}.nimra-chapter .nimra-character{animation:none!important}.nimra-orbit,.nimra-hello-note,.nimra-ground,.nimra-progress{display:none}.nimra-stage__foot{position:relative;inset:auto;margin-top:20px}.nimra-stage__foot nav{display:none}.nimra-stage__foot{justify-content:end}.nimra-character,.before-ask__character .nimra-character{transition:none}.skill-token{will-change:auto}
+}
+@media(prefers-reduced-motion:reduce) and (max-width:720px){.nimra-chapter{min-height:650px;padding-top:35px}.nimra-actor{top:auto;bottom:0}.nimra-stage{padding-top:22px}.nimra-chapter__copy{max-width:100%}}

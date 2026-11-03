@@ -1,0 +1,76 @@
+/* Second Skin: graphite, icy light and the warm gold of its concept poster. */
+html[data-project="second-skin"]{--paper:#edf1f2;--ink:#263647;--soft:#5b6976;--green:#346e9a;--rust:#9c824d;--rule:#c5d0d8;background:#edf1f2;color-scheme:light}
+html[data-project="solara"]{--paper:#08121b;--ink:#edf5fb;--soft:#a2b6c7;--green:#92d6f6;--rust:#e2c78d;--rule:#2b4658;background:#08121b;color-scheme:dark}
+.study--second-skin,.study--solara{position:relative!important;isolation:isolate;overflow:clip}
+.study--second-skin{background:linear-gradient(130deg,#e8edf1,#f6f5ee 58%,#dce7ee)}
+.study--solara{background:radial-gradient(ellipse at 80% 12%,#14324b,transparent 35%),linear-gradient(140deg,#07111b,#0d1a26 60%,#08121b)}
+.study--second-skin .study__inner,.study--solara .study__inner{position:relative;z-index:1;max-width:1450px;padding-top:30px}
+.study--second-skin .study__bar,.study--solara .study__bar{position:relative;z-index:3;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.study--second-skin .study__bar{background:#eef2f4bf}
+.study--solara .study__bar{background:#0c1928c9;border-color:#334c60}
+.wear-cover{position:relative;display:grid;grid-template-columns:1fr 1.2fr 190px;gap:30px;align-items:center;margin-bottom:65px;padding:0 0 30px}
+.wear-cover__edition{position:relative;z-index:2;grid-column:1/-1;display:flex;justify-content:space-between;gap:20px;font:9px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.07em;padding:8px 0 24px}
+.wear-cover__outline{position:absolute;left:6%;top:100px;font:600 clamp(150px,23vw,340px)/.8 var(--sans);letter-spacing:-.08em;-webkit-text-stroke:1px #829aa448;color:transparent;pointer-events:none;white-space:nowrap;z-index:0}
+.wear-cover__copy{position:relative;z-index:2;padding:20px 0;align-self:center;min-width:0}
+.wear-cover__copy>.eyebrow{font-size:8px;letter-spacing:.15em;color:var(--green);margin-bottom:24px}
+.study--second-skin .study__title,.study--solara .study__title{font-family:var(--sans);font-weight:500;font-size:clamp(55px,6.6vw,96px);line-height:.97;letter-spacing:-.065em;margin:0 0 28px;text-transform:uppercase;max-width:100%}
+.study--second-skin .study__q,.study--solara .study__q{font:400 clamp(26px,2.8vw,39px)/1.15 var(--serif);letter-spacing:-.025em;color:var(--green);margin-bottom:25px;max-width:360px}
+.wear-cover__intro{font-size:12px;line-height:1.85;color:var(--soft);max-width:290px}
+.wear-cover__visual{position:relative;z-index:1;perspective:1200px;margin:0;min-width:0;align-self:center}
+.wear-cover__image{position:relative;transform:rotateY(-5deg) rotateZ(-2deg);border-radius:110px 24px 28px 28px;overflow:hidden;border:1px solid #ffffffab;box-shadow:14px 20px 65px #30546b24,inset 0 1px 0 #fff;background:#d9e3eb}
+.wear-cover__image img{display:block;width:100%;height:490px;object-fit:contain}
+.wear-cover__visual figcaption{font:9px/1.8 var(--mono);margin-top:20px;color:var(--soft);max-width:100%;padding:0 8px}
+.wear-cover__note{position:relative;z-index:2;padding:22px 18px;background:#ffffff66;border:1px solid #ffffffcf;border-radius:26px;box-shadow:0 18px 65px #38557112;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);min-width:0}
+.wear-cover__note>div+div{border-top:1px solid var(--rule);margin-top:17px;padding-top:17px}
+.wear-cover__note span{font:7px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.wear-cover__note p{font-size:11px;line-height:1.65;margin:7px 0 0}
+.wear-cover__facts{position:relative;z-index:2;grid-column:1/-1;margin-top:15px;border-top:1px solid var(--rule);padding-top:25px}
+.skin-aura{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.skin-aura span{position:absolute;border-radius:50%;filter:blur(70px);width:45vw;height:45vw;background:#8ec7ee55;right:-15%;top:350px}
+.skin-aura span:nth-child(2){left:-20%;right:auto;top:45%;background:#e7c36d2e}
+.skin-aura span:nth-child(3){right:-10%;top:72%;background:#79b8df3d}
+.study--second-skin .study__body{background:#ffffff7a;border:1px solid #fff;border-radius:30px;padding:30px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 20px 70px #35506a0a}
+.study--second-skin .sect h3{font-family:var(--sans);font-size:25px;color:#315573;letter-spacing:-.035em}
+.study--second-skin .sect p,.study--second-skin .sect li{color:#516372;font-size:14px}
+.study--second-skin .study__standfirst{color:#304b60}
+.study--second-skin .study__aside{background:#e6eef5b3;border:1px solid #fff;border-radius:25px;padding:23px}
+.study--second-skin .sect th{background:#dbeaf5;color:#2d5370}
+.study--second-skin .sect td{color:#4e6170;border-color:#c9d7e2}
+.study--second-skin .study__gallery .screens{grid-template-columns:1fr}
+.study--second-skin .screens img{height:auto;max-height:none;padding:0;background:#e2e6e8;border-radius:14px}
+.study--second-skin .study__next{background:#dfebf2;border-radius:20px;padding:25px}
+.study--second-skin .chips li{color:#496379}
+.solara-mesh{position:absolute;z-index:0;right:-28%;top:100px;width:90%;height:1300px;pointer-events:none;opacity:.55;transform:perspective(1000px) rotateY(-30deg) rotateZ(-12deg);transform-origin:right center;mask-image:linear-gradient(90deg,transparent,#000 50%,#000);-webkit-mask-image:linear-gradient(90deg,transparent,#000 50%,#000)}
+.solara-mesh svg{width:100%;height:auto}
+.study--solara .wear-cover__outline{left:0;top:120px;-webkit-text-stroke-color:#a1cae421;font-size:clamp(140px,19vw,280px)}
+.study--solara .wear-cover__image{background:#0b1420;border-color:#5d8dab66;border-radius:180px 180px 16px 16px;transform:rotateY(-6deg) rotateZ(2deg);box-shadow:0 0 75px #4e9edc29,15px 25px 0 #182d3f99}
+.study--solara .wear-cover__image img{height:560px;object-fit:contain}
+.study--solara .wear-cover__note{background:#162c40a6;border-color:#7cabc94a;box-shadow:0 0 40px #5cb9e112}
+.study--solara .wear-cover__note p{color:#e7f4fc}
+.study--solara .study__body{background:#0d1c2ce8;border:1px solid #47698255;border-radius:5px;padding:28px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.study--solara .study__standfirst{color:#e8f3fa}
+.study--solara .sect h3{color:#b4e3fa;font-family:var(--sans);font-size:26px;letter-spacing:-.035em}
+.study--solara .sect p,.study--solara .sect li{color:#b9cbd7;font-size:14px}
+.study--solara .sect--broke{background:#253024;border-color:#607b61}
+.study--solara .sect--broke h3{color:#e6d5a7}
+.study--solara .study__aside{padding:22px;border:1px solid #47698266;background:#132538e8;border-radius:5px}
+.study--solara .chips li{color:#b7d5e5;border-color:#385770}
+.study--solara .specs dd,.study--solara .specs dt{color:#c1d2de}
+.study--solara .process-images figure{background:#101f2b;border:1px solid #44627b55;padding:10px;margin-bottom:24px}
+.study--solara .process-images img{max-height:650px;width:100%;object-fit:contain}
+.study--solara .process-images figcaption{color:#a4bbcd;padding:8px 2px 2px}
+.study--solara .screens img{background:#101f2b;padding:5px}
+.study--solara .study__next{background:#12283a;border-color:#4e7894;border-radius:5px;padding:25px}
+.study--solara .study__next button{color:#c3e7f8}
+html[data-project="second-skin"] .contact{background:#d4e3ed;color:#2e465b}
+html[data-project="second-skin"] .contact h2 em{color:#3d6d94}
+html[data-project="second-skin"] .contact .eyebrow{color:#58758c}
+html[data-project="second-skin"] .contact-bottom{color:#536979}
+html[data-project="solara"] .site-nav .nav-contact{background:#91d2ef;color:#0d2639}
+html[data-project="solara"] .contact{background:#10263a;color:#e3f2fb;border-top:1px solid #3f627a}
+html[data-project="solara"] .contact h2 em{color:#a2ddf6}
+html[data-project="solara"] .contact .eyebrow{color:#9fbed0}
+html[data-project="solara"] .contact-bottom{color:#a6bdcc}
+@media(max-width:1100px){.wear-cover{grid-template-columns:1fr 1.2fr;gap:25px}.wear-cover__note{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:25px;border-radius:20px;padding:20px}.wear-cover__note>div+div{border-top:0;border-left:1px solid var(--rule);margin:0;padding:0 0 0 20px}.wear-cover__image img{height:450px}.study--solara .wear-cover__image img{height:500px}}
+@media(max-width:700px){.study--second-skin .study__inner,.study--solara .study__inner{padding-top:12px}.wear-cover{grid-template-columns:1fr;gap:25px;margin-bottom:32px}.wear-cover__edition{font-size:7px;padding-bottom:0}.wear-cover__edition span{max-width:58%}.wear-cover__edition span:last-child{text-align:right;max-width:35%}.wear-cover__copy{padding:12px 0 0}.study--second-skin .study__title,.study--solara .study__title{font-size:clamp(62px,14vw,92px);margin-bottom:22px}.study--second-skin .study__q,.study--solara .study__q{font-size:30px;max-width:100%;margin-bottom:18px}.wear-cover__intro{max-width:100%}.wear-cover__outline{font-size:190px;top:270px;left:0}.wear-cover__visual{width:95%;justify-self:center}.wear-cover__image img{height:auto;max-height:500px}.study--solara .wear-cover__image img{height:500px}.wear-cover__note{grid-column:auto;gap:12px;padding:18px 12px}.wear-cover__note>div+div{padding-left:12px}.wear-cover__note p{font-size:10px}.wear-cover__facts{grid-column:auto;margin-top:0;gap:16px}.study--second-skin .study__body,.study--solara .study__body{padding:22px 17px}.study--second-skin .study__layout,.study--solara .study__layout{grid-template-columns:1fr;gap:28px}.study--second-skin .study__aside,.study--solara .study__aside{padding:20px;margin-bottom:25px}.study--second-skin .sect table{font-size:11px}.solara-mesh{width:170%;right:-75%;top:100px;opacity:.4}.study--solara .wear-cover__outline{top:250px;font-size:24vw}}
+@media(prefers-reduced-transparency:reduce){.study--second-skin .study__body{background:#f7fafc}.study--solara .study__body{background:#0d1c2c}}
